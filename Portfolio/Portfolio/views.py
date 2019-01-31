@@ -9,7 +9,7 @@ class ProjectsView(TemplateView):
     template_name = 'projects.html'
 
 class TestView(TemplateView):
-    template_name = 'ToDo/test.html'
+    template_name = 'registration/test.html'
 
 class ThanksView(TemplateView):
-    template_name = 'ToDo/thanks.html'
+    template_name = 'registration/thanks.html'
