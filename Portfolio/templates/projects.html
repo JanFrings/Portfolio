@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="container jumbotron">
+  <h1>Hey check out my projects!</h1>
+  <p>To be able to use the functionality you have to sign up first.</p>
+  <p>You won´t get any junk and your data is save as well!</p>
+</div>
+
+<div class="jumbotron">
+  <div class="container">
+
+    <table>
+
+      <tr class='project_row'>
+        <td class='project_window'>Project window</td>
+        <td class='project_info'>Info</td>
+      </tr>
+
+      <tr class='project_row'>
+        <td class='project_window'>Project window</td>
+        <td class='project_info'>Info</td>
+      </tr>
+
+      <tr class='project_row'>
+        <td class='project_window'> Project window <a href="{% url 'nfl_stats:nfl_index' %}">NFL</a> </td>
+        <td class='project_info'>Info</td>
+      </tr>
+
+    </table>
+
+  </div>
+</div>
+{%endblock%}
