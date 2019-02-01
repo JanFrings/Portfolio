@@ -11,3 +11,25 @@ class UserCreateForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         # self.fields['username'].label = 'NAME'
         # self.fields['email'].label = 'NAME'
+
+class PostForm(forms.ModelForm):
+
+    class Meta:
+        model = Post
+        fields = ('titel', 'text',)
+
+# allows the user to edit there text input
+    widgets = {
+            'text': forms.Textarea(attrs={'class': 'editable medium-editor-textarea postcontent'}),
+        }
+
+class CommentForm(forms.ModelForm):
+
+    class Meta:
+        model = Comment
+        fields = ('text')
+        
+# allows the user to edit there text input
+    widgets = {
+            'text': forms.Textarea(attrs={'class': 'editable medium-editor-textarea postcontent'}),
+        }
