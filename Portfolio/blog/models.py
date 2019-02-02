@@ -10,11 +10,11 @@ class User(auth.models.User,auth.models.PermissionsMixin):
 
 
 class Post(models.Model):
-    author = models.ForeignKey('auth.User', on-delete=models.CASCADE)
+    author = models.ForeignKey('auth.User',on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
-    created_date = DateTimeField(default=timezone.now)
-    published_date = DateTimeField(blank=True, null=True)
+    created_date = models.DateTimeField(default=timezone.now)
+    published_date = models.DateTimeField(blank=True, null=True)
 
     def publish(self):
         self.published_date = timezone.now()
@@ -28,7 +28,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', related_name='comments',on_delete=models.CASCADE)
-    author = models.ForeignKey('auth.User', on-delete=models.CASCADE)
+    author = models.ForeignKey('auth.User',on_delete=models.CASCADE)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
 

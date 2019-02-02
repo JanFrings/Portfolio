@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{%extends 'base.html'%}
+{%block content%}
+<!-- default template name for CreateView = Modelname + _form.html -->
+
+
+<form class="" method="POST">
+  {%crsf_token%}
+  {form.as_p}
+</form>
+{%endblock%}

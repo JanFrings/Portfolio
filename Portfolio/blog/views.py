@@ -2,17 +2,18 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views.generic import (ListView, TemplateView,
-                                CreateView, DeleteView
+                                CreateView, DeleteView,
                                 DetailView, UpdateView)
-from .forms import PostForm, CommentForm
-from .models import Post, Comment
+
+from blog.models import Post, Comment
+from .forms import PostForm, CommentForm, UserForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-
+from django import forms
 
 
 class SignUpView(CreateView):
-    form_class = forms.UserCreateForm
+    form_class = UserForm
     success_url = reverse_lazy('login')
     template_name = 'registration/signup.html'
 
@@ -21,7 +22,7 @@ class PostListView(ListView):
     model = Post
     # find out how to specify which model fields should be displayed in the listview
     def get_query_set(self):
-        return Post.object.filter(published_date__lte=timezone.now()).order_by('published_date')
+        return Post.object.filter(published_date__lte=timezone.now()).order_by('-published_date')
 
 class PostDetailView(DetailView):
     model = Post
