@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-{%extends 'base.html'%}
-{%block content%}
-<!-- default template name for CreateView = Modelname + _form.html -->
+{% extends 'base.html' %}
 
+{% block content %}
+    <h1>New post</h1>
 
-<form class="" method="POST">
-  {%crsf_token%}
-  {form.as_p}
-</form>
-{%endblock%}
+    <form method="POST" class="post-form">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+    <script>var editor = new MediumEditor('.editable');</script>
+
+{% endblock %}

@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-{%extends 'base.html'%}
-{%block content%}
+{% extends 'base.html' %}
+
+{% block content %}
 <div class="centerstage">
 
 
@@ -14,5 +14,7 @@
             <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
         </div>
     {% endfor %}
+        <a href="{% url 'blog:post_create'%}">Post</a>
+        <a href="{% url 'blog:post_detail' 1%}">Post</a>
 </div>
-{%endblock%}
+{% endblock %}
