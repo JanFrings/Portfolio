@@ -1,16 +1,23 @@
-from django.shortcuts import render, get_object_or_404, redirect
-from django.shortcuts import render
-from django.urls import reverse_lazy
 from django.views.generic import (ListView, TemplateView,
                                 CreateView, DeleteView,
                                 DetailView, UpdateView)
 
-from blog.models import Post, Comment
+from blog.models import Post, Comment, User
+from django import forms
 from .forms import PostForm, CommentForm, UserForm
+
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
-from django import forms
 
+from django.shortcuts import render, get_object_or_404, redirect
+from django.urls import reverse_lazy
+
+from django.utils import timezone
+
+from django.contrib.auth import get_user_model
+User = get_user_model()
+
+# ////////////////////////////LoginViews////////////////////////////
 
 class SignUpView(CreateView):
     form_class = UserForm
@@ -18,68 +25,41 @@ class SignUpView(CreateView):
     template_name = 'registration/signup.html'
 
 # ////////////////////////////PostViews////////////////////////////
+
 class PostListView(ListView):
     model = Post
-    # find out how to specify which model fields should be displayed in the listview
-    def get_query_set(self):
-        return Post.object.filter(published_date__lte=timezone.now()).order_by('-published_date')
+
+    def get_queryset(self):
+        return Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+        # -published_date -> the (-)minus orders the list in a way that the most rescent one is first
+
 
 class PostDetailView(DetailView):
     model = Post
 
+    # def get_queryset(self):
+    #     queryset = super().get_queryset()
+    #     return queryset.filter(user__username__iexact=self.kwargs.get("username"))
+
+
 class PostCreateView(LoginRequiredMixin, CreateView):
+
+    #setting the LoginRequiredMixin attributes
     login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
 
+    #setting the CreateView attributes
     form_class = PostForm
     model = Post
 
-class PostUpdateView(LoginRequiredMixin, UpdateView):
-    login_url = '/login/'
-    redirect_field_name = 'blog/post_detail.html'
-
-    form_class = PostForm
-    model = Post
-
-
-class PostDeleteView(LoginRequiredMixin, DeleteView):
-    model = Post
-    success_url = reverse_lazy('post_list')
-
-class PostDraftListView(LoginRequiredMixin, ListView):
-    login_url = '/login/'
-    redirect_field_name = 'blog/post_detail.html'
-
-    model = Post
-
-    def get_query_set(self):
-        return Post.object.filter(published_date__isnull=True).order_by('created_date')
-
-# ////////////////////////////PostFunctions require pk match!////////////////////////////
+    def form_valid(self, form):
+        self.object = form.save(commit=False)
+        self.object.author = self.request.user
+        self.object.save()
+        return super().form_valid(form)
 
 @login_required
 def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()
-    return redirect('post_detail', pk=pk)
-
-@login_required
-def add_comment_to_post(request, pk):
-    post = get_object_or_404(Post, pk=pk)
-    if request.method == "POST":
-        form = CommentForm(request.POST)
-        if form.is_valid():
-            comment = form.save(commit=False)
-            comment.post = post
-            comment.save()
-            return redirect('post_detail', pk=post.pk)
-    else:
-        form = CommentForm()
-    return render(request, 'blog/comment_form.html', {'form': form})
-
-@login_required
-def comment_remove(request, pk):
-    comment = get_object_or_404(Comment, pk=pk)
-    post_pk = comment.post.pk
-    comment.delete()
-    return redirect('post_detail', pk=post_pk)
+    return redirect('blog:post_detail', pk=pk)

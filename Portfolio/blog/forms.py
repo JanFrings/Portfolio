@@ -25,6 +25,7 @@ class PostForm(forms.ModelForm):
         model = Post
         fields = ('title', 'text',)
 
+
 # allows the user to edit there text input
     widgets = {
             'text': forms.Textarea(attrs={'class': 'editable medium-editor-textarea postcontent'}),

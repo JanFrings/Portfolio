@@ -1,17 +1,22 @@
 from django.db import models
+from django.conf import settings
+
 from django.contrib import auth
 
 from django.utils import timezone
 from django.urls import reverse
 
-class UserModel(auth.models.User,auth.models.PermissionsMixin):
+from django.conf import settings
+
+class User(auth.models.User,auth.models.PermissionsMixin):
 
     def __str__(self):
         return '@{}'.format(self.username)
 
 
+
 class Post(models.Model):
-    author = models.ForeignKey('auth.User',on_delete=models.CASCADE)
+    author = models.ForeignKey('auth.User', on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
@@ -22,14 +27,14 @@ class Post(models.Model):
         self.save()
 
     def get_absolute_url(self):
-        return reverse('post_detail',kwargs={'pk':self.pk})
+        return reverse('blog:post_detail',kwargs={'pk':self.pk})
 
     def __str__(self):
         return self.title
 
 class Comment(models.Model):
     post = models.ForeignKey('blog.Post', related_name='comments',on_delete=models.CASCADE)
-    author = models.ForeignKey('auth.User',on_delete=models.CASCADE)
+    author = models.OneToOneField(User, on_delete=models.CASCADE)
     text = models.TextField()
     created_date = models.DateTimeField(default=timezone.now)
 
