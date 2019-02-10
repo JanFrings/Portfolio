@@ -17,4 +17,18 @@
 
       <p class='postcontent' >{{ post.text|safe|linebreaksbr }}</p>
 
+      <hr>
+        <a class="btn btn-primary btn-comment" href="{% url 'blog:post_comment' pk=post.pk %}">Add comment</a>
+
+      {% for comment in post.comments.all %}
+
+      <p> {{comment.text}} </p>
+      <p> {{comment.author}}</p>
+      <p> {{comment.created_date}} </p>
+
+
+      {%endfor%}
+
+
+
 {% endblock %}

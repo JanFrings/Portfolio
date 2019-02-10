@@ -75,3 +75,20 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
 class PostUpdateView(LoginRequiredMixin, UpdateView):
     model = Post
     fields = ['title', 'text']
+
+
+
+def add_comment_to_post(request, pk):
+    post = get_object_or_404(Post, pk=pk)
+    if request.method == 'POST':
+        form = CommentForm(request.POST)
+        if form.is_valid():
+            comment = form.save(commit=False)
+            comment.post = post             #assigns the post object call in the beginning to the comment.post model field
+            comment.author = request.user   #assigns the current user to the author field in the model
+            comment.save()
+        return redirect('blog:post_detail', pk=post.pk)
+    else:
+        form = CommentForm()
+        dic_form = {'form':form}
+        return render(request, 'blog/comment_form.html', dic_form)
