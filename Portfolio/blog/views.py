@@ -71,3 +71,7 @@ class PostDeleteView(LoginRequiredMixin, DeleteView):
     #DeleteView attributes
     model = Post
     success_url = reverse_lazy('blog:post_list')
+
+class PostUpdateView(LoginRequiredMixin, UpdateView):
+    model = Post
+    fields = ['title', 'text']
