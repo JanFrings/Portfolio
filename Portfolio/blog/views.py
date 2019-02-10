@@ -37,21 +37,18 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Post
 
-    # def get_queryset(self):
-    #     queryset = super().get_queryset()
-    #     return queryset.filter(user__username__iexact=self.kwargs.get("username"))
-
 
 class PostCreateView(LoginRequiredMixin, CreateView):
 
-    #setting the LoginRequiredMixin attributes
+    #LoginRequiredMixin attributes
     login_url = '/login/'
     redirect_field_name = 'blog/post_detail.html'
 
-    #setting the CreateView attributes
+    #CreateView attributes
     form_class = PostForm
     model = Post
 
+    # passing the current user object to post.author within the validation
     def form_valid(self, form):
         self.object = form.save(commit=False)
         self.object.author = self.request.user
@@ -63,3 +60,14 @@ def post_publish(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.publish()
     return redirect('blog:post_detail', pk=pk)
+
+class PostDeleteView(LoginRequiredMixin, DeleteView):
+    # so for there is no user interface to get to the deleteview but only a superuser should be allowed to delete
+
+    #LoginRequiredMixin attributes
+    login_url = '/login/'
+    redirect_field_name = 'blog/post_list.html'
+
+    #DeleteView attributes
+    model = Post
+    success_url = reverse_lazy('blog:post_list')
