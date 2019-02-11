@@ -14,8 +14,11 @@ urlpatterns = [
     path('post/<int:pk>/publish/', views.post_publish, name='post_publish'),
     path('post/<int:pk>/comment/', views.add_comment_to_post, name='post_comment'),
     # path('comment/<int:pk>/remove/', views.comment_remove, name='comment_remove'),
+    path('post/index', views.PostIndexView.as_view(), name='post_index'),
 
     path('login/', auth_view.LoginView.as_view(template_name='registration/login.html'), name='login'),
     path('logout/', auth_view.LogoutView.as_view(), name='logout'),
     path('signup/', views.SignUpView.as_view(), name='signup'),
+
+    path('post/jay_shetty', views.JayShettyView.as_view(), name='jay_shetty')
 ]

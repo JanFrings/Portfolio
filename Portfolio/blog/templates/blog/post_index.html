@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="jumbotron">
+  <div class="container">
+    <h3>Welcome to my Blog</h3>
+    <p>In this point in time we're getting swamped with information and noone knows what to believe anymore.</p>
+    <p>This blog is helping me keeping track of people who I decided to listen to.</p>
+    <p>Maybe it helps you to find some inspiration and hope in humanity as well!</p>
+  </div>
+</div>
+
+<table class='blog-table'>
+  <thead>
+    <th>Mind</th>
+    <th>Body</th>
+    <th>All Stars</th>
+  </thead>
+  <tr>
+    <td> <a href="{% url 'blog:jay_shetty' %}">Jay Shetty</a></td>
+    <td> <a href="#">David Goggins</a></td>
+    <td> <a href="#">RSD Max</a></td>
+  </tr>
+
+</table>
+
+{%endblock%}

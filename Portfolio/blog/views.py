@@ -92,3 +92,16 @@ def add_comment_to_post(request, pk):
         form = CommentForm()
         dic_form = {'form':form}
         return render(request, 'blog/comment_form.html', dic_form)
+
+
+class PostIndexView(TemplateView):
+    template_name = 'blog/post_index.html'
+
+# ////////////////////////////MentorViews////////////////////////////
+
+class JayShettyView(ListView):
+    model = Post
+    template_name = 'mentor/jay_shetty.html'
+
+    def get_queryset(self):
+        return Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')

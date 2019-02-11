@@ -144,3 +144,16 @@ footer .container .font-footer-intro{
   height: 400px;
   width: 400px;
 }
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* blog section */
+
+.blog-table{
+  margin: auto;
+
+}
+
+.blog-table td{
+  width: 400px;
+  height: 400px;
+}
