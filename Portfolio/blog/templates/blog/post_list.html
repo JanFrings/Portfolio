@@ -4,11 +4,17 @@
 {% block content %}
 <div class="centerstage">
 
+  <div class="jumbotron">
+    <div class="container">
+      <h3>Welcome to my Blog</h3>
+      <p>In this point in time we're getting swamped with information and noone knows what to believe anymore.</p>
+      <p>This blog is helping me keeping track of people who I decided to listen to.</p>
+      <p>Maybe it helps you to find some inspiration and hope in humanity as well!</p>
+    </div>
+  </div>
 
     {% for post in post_list %}
     <!-- for ListViews object_list will contain the list of objects by default -->
-
-
         <div class="post">
 
             <h1><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
