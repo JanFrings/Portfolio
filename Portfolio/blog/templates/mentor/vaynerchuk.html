@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Vaynerchuk</h1>
+
+{%regroup post_list by mentor as mentor_list%}
+
+{%for mentor in mentor_list%}
+{%for post in mentor.list%}
+{% if post.mentor == "Vaynerchuk" %}
+
+<p>{{post.title}}</p>
+<p>{{post.text}}</p>
+
+{%endif%}
+{%endfor%}
+{%endfor%}
+
+{% endblock%}

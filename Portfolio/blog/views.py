@@ -99,9 +99,23 @@ class PostIndexView(TemplateView):
 
 # ////////////////////////////MentorViews////////////////////////////
 
-class JayShettyView(ListView):
+class ShettyView(ListView):
     model = Post
-    template_name = 'mentor/jay_shetty.html'
+    template_name = 'mentor/shetty.html'
+
+    def get_queryset(self):
+        return Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+
+class GogginsView(ListView):
+    model = Post
+    template_name = 'mentor/goggins.html'
+
+    def get_queryset(self):
+        return Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+
+class VaynerchukView(ListView):
+    model = Post
+    template_name = 'mentor/vaynerchuk.html'
 
     def get_queryset(self):
         return Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')

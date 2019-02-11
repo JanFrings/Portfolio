@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
-
+{%load static%}
 {% block content %}
 
 <div class="jumbotron">
@@ -12,16 +12,16 @@
   </div>
 </div>
 
-<table class='blog-table'>
+<table class='blog-index-table'>
   <thead>
     <th>Mind</th>
     <th>Body</th>
-    <th>All Stars</th>
+    <th>Career</th>
   </thead>
   <tr>
-    <td> <a href="{% url 'blog:jay_shetty' %}">Jay Shetty</a></td>
-    <td> <a href="#">David Goggins</a></td>
-    <td> <a href="#">RSD Max</a></td>
+    <td> <a href="{% url 'blog:shetty' %}"> <img src="{% static 'images/shetty.jpg' %}" alt="Uuups that went wrong."> </a></td>
+    <td> <a href="{% url 'blog:goggins' %}"> <img src="{% static 'images/goggins.jpg'%}" alt="Uuups that went wrong."></a></td>
+    <td> <a href="{% url 'blog:vaynerchuk' %}"> <img src="{% static 'images/vaynerchuk.jpg'%}" alt="Uuups that went wrong."> </a></td>
   </tr>
 
 </table>

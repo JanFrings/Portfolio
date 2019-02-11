@@ -20,5 +20,7 @@ urlpatterns = [
     path('logout/', auth_view.LogoutView.as_view(), name='logout'),
     path('signup/', views.SignUpView.as_view(), name='signup'),
 
-    path('post/jay_shetty', views.JayShettyView.as_view(), name='jay_shetty')
+    path('post/shetty', views.ShettyView.as_view(), name='shetty'),
+    path('post/goggins', views.GogginsView.as_view(), name='goggins'),
+    path('post/vaynerchuk', views.VaynerchukView.as_view(), name='vaynerchuk')
 ]
