@@ -149,6 +149,8 @@ footer .container .font-footer-intro{
 /* /////////////////////////////////////////////////////////////////////////// */
 /* blog section */
 
+
+/* //////////////////style post_index.html///////////////// */
 .blog-index-table{
   margin-left: auto;
   margin-right: auto;
@@ -173,12 +175,7 @@ footer .container .font-footer-intro{
   border-radius: 50%;
 }
 
-/* .blog-post-table{
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-} */
-
+/* //////////////////style mentor.htmls///////////////// */
 .blog-post-image{
   margin-left: 0;
   width: 300px;
@@ -186,10 +183,41 @@ footer .container .font-footer-intro{
   border-radius: 50%;
 }
 
+/* position intro text */
 .blog-post-intro{
-  padding-left: 5em;
+  padding-left: 35px;
+  width: 800px;
+
 }
 
-.blog-post-socialmedia{
-    padding-left: 20em;
+/* Style all font awesome icons */
+.blog-post-socialmedia-icons {
+  margin: 5px;
+  padding: 20px;
+  width: 70px;
+  height: 70px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-youtube {
+  background: #cc181e;
+  color: white;
+}
+
+.fa-instagram {
+  background: linear-gradient( #400080, transparent),
+              linear-gradient(200deg, #d047d1, #ff0000, #ffff00);
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
 }

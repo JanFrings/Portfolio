@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
-
+{%load static%}
 {% block content %}
-<h1>Goggins</h1>
+
+<div class="jumbotron">
+  <div class="container">
+    <table class='blog-post-table'>
+      <tr>
+        <td>
+          <img class='blog-post-image' src="{% static 'images/goggins.jpg'%}" alt="">
+        </td>
+        <td class='blog-post-intro'>
+          <h1>David Goggins</h1>
+          <p>blabla</p>
+        </td>
+        <td>
+
+          <table>
+            <tr>
+              <td> <a class="blog-post-socialmedia-icons fa fa-youtube fa-2x" href="#"></a> </td>
+
+            </tr>
+            <tr>
+              <td><a class="blog-post-socialmedia-icons fa fa-instagram fa-2x" href="#"></a></td>
+
+            </tr>
+            <tr>
+              <td><a class="blog-post-socialmedia-icons fa fa-twitter fa-2x" href="#"></a></td>
+
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</div>
+
+<br>
+<br>
+<br>
+
+
 
 {%regroup post_list by mentor as mentor_list%}
 
 {%for mentor in mentor_list%}
 {%for post in mentor.list%}
 {% if post.mentor == "Goggins" %}
-
+<div class="jumbotron">
+  <div class="container">
 <p>{{post.title}}</p>
 <p>{{post.text}}</p>
-
+  </div>
+</div>
 {%endif%}
 {%endfor%}
 {%endfor%}
+
+
 
 {% endblock%}
