@@ -16,6 +16,22 @@ for (var i = 0; i < url.length; i++) {
 }
 
 
+////////////changing the background depending on the url (not quite working)////////////////////////////////////////////////////
+var url2 = window.location.pathname.split('/');
+
+setInterval(function(){
+  for (var i = 0; i < url.length; i++) {
+     if (url2.includes('blog')) {
+       $('body').removeClass('base-body')
+       $('body').addClass('blog-body')
+     }else{
+       $('body').removeClass('blog-body')
+       $('body').addClass('base-body')
+    }
+  }
+// check intervall in milliseconds
+}, 100);
+
 //////////////navbar changes background and link color while scrolling past a certain point////////////////////////////////////////////
 // adds classes as soon as the window scroll is below 750 //
 setInterval(function(){

@@ -2,11 +2,19 @@
 /* /////////////////////////////////////////////////////////////////////////// */
 /* BASE TEMPLATE */
 
-body{
+.base-body{
   background-image: url('/static/images/ggbridge.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.blog-body{
+  background-image: url('/static/images/blog_background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
 }
 
 nav{
