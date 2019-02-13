@@ -27,7 +27,6 @@
         <!-- left content table cell  -->
         <h1>Hey!</h1>
         <br>
-        <p>I'm Jan Frings and currently I'm on my way to become a self taught software developer.</p>
         <p>Feel free to check out my Portfolio and Projects to get an impression of my past work!</p>
         <br>
         <a class="anchor" id="aboutme_start"></a>
@@ -193,8 +192,28 @@
     </tr>
    </table>
 
+   <br>
+   <br>
 
-   <a href="{% url 'resume_download'%}">Download</a>
+   <table class='resume-download-table'>
+     <tr>
+       <td>
+         <p><strong>Official curriculum vitae PDF-File right here</strong></p>
+       </td>
+       <tr>
+         <td class='resume-download-table'>
+           <button class='resume-download' type="button">
+           <a class='resume-download-font' href="{% url 'resume_download'%}"><i class="fas fa-file-download fa-2x"></i></a>
+         </button>
+       </td>
+       </tr>
+
+     </tr>
+   </table>
+
+
+
+
  </div>
 </div>
 
@@ -228,7 +247,7 @@
     </tr>
 
     <tr>
-      <td class='contact_icon'><a class='contact_icon' href="#"><i class="fab fa-github-square fa-3x"></a></i></td>
+      <td class='contact_icon'><a class='contact_icon' href="https://github.com/JanFrings"><i class="fab fa-github-square fa-3x"></a></i></td>
       <td class='contact_table'><a class='black' href="#"><strong>GitHub</strong><br>JanFrings</a></td>
 
       <td></td>

@@ -27,17 +27,26 @@
 
   </head>
   <body>
-    <nav class='navbar sticky-top nav-tabs'>
-      <div class="container">
-        <ul class='nav justify-content-center'>
-          <li class='nav-item'><a class='nav-link font-brand' href="{% url 'index' %}">Jan Frings</a></li>
-        </ul>
-        <ul class='nav justify-content-start '>
+    <nav class='navbar sticky-top'>
+      <div class="whole-navbar">
+        <ul class='nav'>
+
           <li class='nav-item'><a id='IndexNav' class='nav-link font-link' href="#aboutme_start">About me</a></li>
           <li class='nav-item'><a id='IndexNav' class='nav-link font-link' href="#portfolio_start">Portfolio</a></li>
           <li class='nav-item'><a id='IndexNav' class='nav-link font-link' href="#contact_start">Contact me</a></li>
 
-          <li class="nav-item dropdown">
+
+
+
+
+
+          <li class='nav-item nav-item-brand'><a class='nav-link nav-item-brand-font' href="{% url 'index' %}">Jan Frings</a></li>
+
+
+
+          <li class='nav-item nav-item-projects'><a id='IndexNav' class='nav-link font-link' href="{% url 'projects'%}">Projects</a></li>
+
+          <li class="nav-item dropdown nav-item-login">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user-tie"></i></a>
               {% if not user.is_authenticated %}
