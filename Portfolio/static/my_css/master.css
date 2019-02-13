@@ -59,7 +59,7 @@ nav{
 }
 
 footer .container .font-footer{
-  position: fixed;
+  position: static;
   bottom: 0.65em;
   font-family: 'Grand Hotel', cursive;
   font-size: 1.3em;
@@ -67,7 +67,7 @@ footer .container .font-footer{
 }
 
 footer .container .font-footer-intro{
-  position: fixed;
+  position: static;
   bottom: 0;
 }
 
