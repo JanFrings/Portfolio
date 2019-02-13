@@ -23,7 +23,7 @@ class PostForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ('title', 'text', 'mentor')
+        fields = ('title', 'text', 'mentor', 'image', 'url')
 
 
 # allows the user to edit there text input

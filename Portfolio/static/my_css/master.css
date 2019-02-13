@@ -175,7 +175,9 @@ footer .container .font-footer-intro{
   border-radius: 50%;
 }
 
-/* //////////////////style mentor.htmls///////////////// */
+/* //////////////////////////////////style mentor-htmls////////////////////////////// */
+
+/* //////////////////style mentor-htmls head///////////////// */
 .blog-post-image{
   margin-left: 0;
   width: 300px;
@@ -220,4 +222,25 @@ footer .container .font-footer-intro{
 .fa-twitter {
   background: #55ACEE;
   color: white;
+}
+
+/* //////////////////style mentor-htmls posts///////////////// */
+
+.post-title{
+  font-size: 2em;
+}
+
+.post-text{
+  font-size: 1em;
+  width: 800px;
+}
+
+.post-image{
+  /* padding : 20px; */
+  width: 300px;
+  border-radius: 50%;
+}
+
+.post-url{
+  /* padding:20px; */
 }

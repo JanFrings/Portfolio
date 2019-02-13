@@ -49,16 +49,25 @@
 {%for mentor in mentor_list%}
 {%for post in mentor.list%}
 {% if post.mentor == "Goggins" %}
+
 <div class="jumbotron">
   <div class="container">
-<p>{{post.title}}</p>
-<p>{{post.text}}</p>
+    <table>
+      <tr>
+        <td class='post-title'>{{post.title}}</td>
+      </tr>
+      <tr>
+        <td class='post-text'>{{post.text}}</td>
+        <td class='post-image'><img class='post-image' src="{{post.image.url}}" alt="not showing" height="300" width="300"></td>
+        <td class='post-url'><p><a class='blog-post-socialmedia-icons fa fa-youtube fa-2x' href="{{post.url}}"></a></p></td>
+      </tr>
+    </table>
   </div>
 </div>
+
 {%endif%}
 {%endfor%}
 {%endfor%}
-
 
 
 {% endblock%}

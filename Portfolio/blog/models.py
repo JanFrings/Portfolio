@@ -22,6 +22,8 @@ class Post(models.Model):
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
     mentor = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='blog_images/')
+    url = models.URLField()
 
     def publish(self):
         self.published_date = timezone.now()
