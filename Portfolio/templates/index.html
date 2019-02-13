@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {%extends 'base.html'%}
+{%load static%}
 {%block content%}
 
 <div class='container'>
@@ -19,40 +20,59 @@
   <div class="container">
 
 
-    <h1>Hey!</h1>
-    <br>
-    <p>I'm Jan Frings and currently I'm on my way to become a self taught software developer.</p>
-    <p>Feel free to check out my Portfolio and Projects to get an impression of my past work!</p>
-    <br>
-    <a class="anchor" id="aboutme_start"></a>
+<!-- main aboutme table -->
+  <table>
+    <tr>
+      <td>
+        <!-- left content table cell  -->
+        <h1>Hey!</h1>
+        <br>
+        <p>I'm Jan Frings and currently I'm on my way to become a self taught software developer.</p>
+        <p>Feel free to check out my Portfolio and Projects to get an impression of my past work!</p>
+        <br>
+        <a class="anchor" id="aboutme_start"></a>
 
-    <table>
-      <tr>
-        <td class='aboutme_details aboutme_row'><strong>Name</strong> </td>
-        <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-        <td class='aboutme_row'>Jan Theodor Frings</td>
-      </tr>
-      <tr>
-        <td class='aboutme_details aboutme_row'><strong>Age</strong> </td>
-        <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-        <td class='aboutme_row'>24 Years</td>
-      </tr>
-      <tr>
-        <td class='aboutme_details aboutme_row'><strong>Nationality</strong> </td>
-        <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-        <td class='aboutme_row'>Germany</td>
-      </tr>
-      <tr>
-        <td class='aboutme_details aboutme_row'><strong>Location</strong> </td>
-        <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-        <td class='aboutme_row'>Aachen, NRW</td>
-      </tr>
-      <tr>
-        <td class='aboutme_details aboutme_row'><strong>Degree</strong> </td>
-        <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-        <td class='aboutme_row'>Bachelor of Engineering</td>
-      </tr>
-    </table>
+        <table>
+          <tr>
+            <td class='aboutme_details aboutme_row'><strong>Name</strong> </td>
+            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+            <td class='aboutme_row'>Jan Theodor Frings</td>
+          </tr>
+          <tr>
+            <td class='aboutme_details aboutme_row'><strong>Age</strong> </td>
+            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+            <td class='aboutme_row'>24 Years</td>
+          </tr>
+          <tr>
+            <td class='aboutme_details aboutme_row'><strong>Nationality</strong> </td>
+            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+            <td class='aboutme_row'>Germany</td>
+          </tr>
+          <tr>
+            <td class='aboutme_details aboutme_row'><strong>Location</strong> </td>
+            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+            <td class='aboutme_row'>Aachen, NRW</td>
+          </tr>
+          <tr>
+            <td class='aboutme_details aboutme_row'><strong>Degree</strong> </td>
+            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+            <td class='aboutme_row'>Bachelor of Engineering</td>
+          </tr>
+        </table>
+      </td>
+
+      <td>
+        <!-- right image table cell -->
+        <img class='aboutme-image' src="{% static 'images/icon.jpg'%}" alt="" width="350" height="350">
+      </td>
+    </tr>
+  </table>
+
+
+
+
+
+
 
   </div>
 </div>
@@ -173,6 +193,8 @@
     </tr>
    </table>
 
+
+   <a href="{% url 'resume_download'%}">Download</a>
  </div>
 </div>
 

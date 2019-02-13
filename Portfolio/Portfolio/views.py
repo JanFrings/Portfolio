@@ -1,4 +1,8 @@
 from django.views.generic import TemplateView
+from django.http import HttpResponse
+from wsgiref.util import FileWrapper
+
+from django.http import FileResponse
 # Create your views here.
 
 
@@ -13,3 +17,7 @@ class TestView(TemplateView):
 
 class ThanksView(TemplateView):
     template_name = 'registration/thanks.html'
+
+def resume_download(request):
+    response = FileResponse(open('static/documents/Frings_Resume.pdf', 'rb'), as_attachment=True)
+    return response

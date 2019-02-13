@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from . import views
 from django.conf import settings
-from django.conf.urls.static import static 
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -28,6 +28,7 @@ urlpatterns = [
     path('blog/register/', include('django.contrib.auth.urls')),
     path('test/', views.TestView.as_view(), name='test'),
     path('thanks/', views.ThanksView.as_view(), name='thanks'),
+    path('resume/download', views.resume_download, name='resume_download'),
 ]
 
 if settings.DEBUG:
