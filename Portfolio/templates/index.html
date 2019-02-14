@@ -1,266 +1,46 @@
 <!DOCTYPE html>
 {%extends 'base.html'%}
 {%load static%}
+
+{%block background%}
+"/static/images/ggbridge.jpg"
+{%endblock%}
+
 {%block content%}
 
-<div class='container'>
-  <h1 style='margin-top:3.7em; margin-bottom:1em;'></h1>
-</div>
 
 <div class="container">
   <h1 class='opener'>This is Jan Frings, <br> Engineer & coding Rookie</h1>
 </div>
-
-<div class='container'>
-  <h1 style='margin-top:16em; margin-bottom:1em;'>About me</h1>
-</div>
-
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-
-
-<!-- main aboutme table -->
-  <table>
-    <tr>
-      <td>
-        <!-- left content table cell  -->
-        <h1>Hey!</h1>
-        <br>
-        <p>Feel free to check out my Portfolio and Projects to get an impression of my past work!</p>
-        <br>
-        <a class="anchor" id="aboutme_start"></a>
-
-        <table>
-          <tr>
-            <td class='aboutme_details aboutme_row'><strong>Name</strong> </td>
-            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-            <td class='aboutme_row'>Jan Theodor Frings</td>
-          </tr>
-          <tr>
-            <td class='aboutme_details aboutme_row'><strong>Age</strong> </td>
-            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-            <td class='aboutme_row'>24 Years</td>
-          </tr>
-          <tr>
-            <td class='aboutme_details aboutme_row'><strong>Nationality</strong> </td>
-            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-            <td class='aboutme_row'>Germany</td>
-          </tr>
-          <tr>
-            <td class='aboutme_details aboutme_row'><strong>Location</strong> </td>
-            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-            <td class='aboutme_row'>Aachen, NRW</td>
-          </tr>
-          <tr>
-            <td class='aboutme_details aboutme_row'><strong>Degree</strong> </td>
-            <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-            <td class='aboutme_row'>Bachelor of Engineering</td>
-          </tr>
-        </table>
-      </td>
-
-      <td>
-        <!-- right image table cell -->
-        <img class='aboutme-image' src="{% static 'images/icon.jpg'%}" alt="" width="350" height="350">
-      </td>
-    </tr>
-  </table>
-
-
-
-
-
-
-
-  </div>
-</div>
-
-
-
-<div class='container'>
-  <h1 style='margin-top:2em;  margin-bottom:1em;'>Portfolio</h1>
-</div>
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-
-    <a href="{% url 'projects'%}"><h5>Projects</h5></a>
-    <a class="anchor" id="portfolio_start"></a>
-
-
-    <table class='resume-table'>
-
-      <tr>
-       <td></td>
-       <td class='content-right'>
-         <strong>August 2010 - June 2013</strong> <br>
-         <br>
-         Gesamtschule Niederzier <br>
-         Abitur <br>
-         <br>
-         The achievment of an Abitur degree in Germany is a higher education entrance
-         qualification. <br>
-         It's approximately equivalent to British A levels.
-       </td>
-     </tr>
-
-     <tr>
-      <td></td>
-      <td class='content-right'>
-        <strong>October 2013 - August 2017</strong> <br>
-        <br>
-        FH Aachen <br>
-        University studies (Bachelor civil engineering) <br>
-        <br>
-        I always wanted to be an engineer in someway, mostly because they
-        help move the world toward a brighter future by fixing things that
-        are broken improve those that work and come up with new inventions. <br>
-        <br>
-        Among the skillset an engineering student develops during the studies is analytical thinking as well as strong communication to asure succesful teamwork.<br>
-        Basically every aspect of an engineers mindset has to point toward solving problems.
-      </td>
-    </tr>
-
-    <tr>
-      <td class='content-left'>
-        <strong>Mai 2016 - September 2017</strong> <br>
-        <br>
-        Hegger & Partner Engineering <br>
-        Aachen <br>
-        <br>
-        A few semesters down the road I landed a working student job in a local engineering office. <br>
-        Beeing able to glance into real world engineering work was a big opertunity to learn. <br>
-        <br>
-        The aspect of a well thought of workflow and an accountable personality were the main takeaways from this experience.
-      </td>
-      <td></td>
-    </tr>
-
-
-     <tr>
-      <td></td>
-      <td class='content-right'>
-        <strong>October 2017 - September 2018</strong> <br>
-        <br>
-        Australia <br>
-        Work & Travel <br>
-        <br>
-        It's never been easier to travel wherever you want to go while still staying in touch with family and friends through social media <br>
-        The opertunity to travel was just as much needed to lift my english skills to the next level as well as beeing able to reflect about what is important to me which shaped my life like nothing else before.
-      </td>
-    </tr>
-
-    <tr>
-      <td class='content-left'>
-        <strong>December 2018 - April 2018</strong> <br>
-        <br>
-        Mackay´s Bananafarm <br>
-        Season worker <br>
-        <br>
-        <strong>June 2018 - August 2018</strong> <br>
-        <br>
-        Atom Resources <br>
-        Electrican Labourer <br>
-        <br>
-        To make a living in Australia it was crusial to adabt quickly to the environment and people I didn't hesitate to explore unknown fields of profession.
-
-      </td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <td class='content-left'>
-        <strong>Septembers 2018</strong> <br>
-        <br>
-        Self studies<br>
-        <br>
-        At this point my curiosity for coding took over and I looked deeper into the topic. <br>
-        After a lot of research I choose to become a self taught software developer and this website is my first project to enter the world of coding.
-      </td>
-      <td></td>
-    </tr>
-
-    <tr>
-      <td></td>
-      <td class='content-right'>
-        <strong>October 2018</strong> <br>
-        <br>
-        FH Aachen <br>
-        University studies (Master civil engineering)
-      </td>
-    </tr>
-   </table>
-
-   <br>
-   <br>
-
-   <table class='resume-download-table'>
-     <tr>
-       <td>
-         <p><strong>Official curriculum vitae PDF-File right here</strong></p>
-       </td>
-       <tr>
-         <td class='resume-download-table'>
-           <button class='resume-download' type="button">
-           <a class='resume-download-font' href="{% url 'resume_download'%}"><i class="fas fa-file-download fa-2x"></i></a>
-         </button>
-       </td>
-       </tr>
-
-     </tr>
-   </table>
-
-
-
-
- </div>
-</div>
-
-
-
-
-
-
-
-<div class='container'>
-  <h1 style='margin-top:2em;  margin-bottom:1em;'>Contact me</h1>
-</div>
-
-<a class="anchor" id="contact_start"></a>
-<div class="jumbotron jumbotron-fluid">
-  <div class="container">
-
-<h5>Feel free to contact me using any of the contacts below</h5>
+<!-- linebreaks to keep the footer at the bottom -->
 <br>
-
-<table>
-  <th>
-    <tr>
-      <td class='contact_icon'><a class='contact_icon' href="#"><i class="fas fa-envelope fa-3x"></i></a></td>
-      <td class='contact_table'><a class='black' href="#"><strong>E-mail</strong><br>Jan-Frings@gmx.de </a></td>
-
-      <td></td>
-
-      <td class='contact_icon'><a class='contact_icon' href="#"><i class="fas fa-info fa-3x"></i></a></td>
-      <td class='contact_table'><a class='black' href="#"><strong>Indeed</strong></a></td>
-    </tr>
-
-    <tr>
-      <td class='contact_icon'><a class='contact_icon' href="https://github.com/JanFrings"><i class="fab fa-github-square fa-3x"></a></i></td>
-      <td class='contact_table'><a class='black' href="#"><strong>GitHub</strong><br>JanFrings</a></td>
-
-      <td></td>
-
-      <td class='contact_icon'><a class='contact_icon' href="#"><i class="fab fa-linkedin fa-3x"></i></a></td>
-      <td class='contact_table'><a class='black' href="#"><strong>LinkedIn</strong></a></td>
-  </tr>
-  </th>
-</table>
-
-  </div>
-</div>
-
-
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 {%endblock%}

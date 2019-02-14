@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 
+{%load static%}
+{%block background%}
+"/static/images/blog_background.jpg"
+{%endblock%}
+
 {% block content %}
 
 
@@ -16,7 +21,7 @@
         {% endif %}
 
       <p class='postcontent' >{{ post.text|safe|linebreaksbr }}</p>
-      <p class='postcontent' >{{ post.mentor|safe|linebreaksbr }}</p>      
+      <p class='postcontent' >{{ post.mentor|safe|linebreaksbr }}</p>
 
       <hr>
         <a class="btn btn-primary btn-comment" href="{% url 'blog:post_comment' pk=post.pk %}">Add comment</a>

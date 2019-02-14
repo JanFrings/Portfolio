@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 {%extends 'base.html'%}
 
+{%block background%}
+"/static/images/blog_background.jpg"
+{%endblock%}
+
+{%block navbar%}
+<li class='nav-item nav-item-website'><a class='nav-link font-link' href="#aboutme_start">Website</a></li>
+<li class='nav-item nav-item-blog'><a class='nav-link font-link' href="#portfolio_start">Blog</a></li>
+<li class='nav-item nav-item-nfl'><a class='nav-link font-link' href="#contact_start">NFL</a></li>
+{%endblock%}
+
 {%block content%}
 <div class="container jumbotron">
   <h1>Hey check out my projects!</h1>

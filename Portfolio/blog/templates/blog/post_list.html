@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 
+{%load static%}
+{%block background%}
+"/static/images/blog_background.jpg"
+{%endblock%}
+
 {% block content %}
 <div class="centerstage">
 
-  
+
 
     {% for post in post_list %}
     <!-- for ListViews object_list will contain the list of objects by default -->

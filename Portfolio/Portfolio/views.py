@@ -12,6 +12,9 @@ class IndexView(TemplateView):
 class ProjectsView(TemplateView):
     template_name = 'projects.html'
 
+class PortfolioView(TemplateView):
+    template_name='portfolio.html'
+
 class TestView(TemplateView):
     template_name = 'registration/test.html'
 

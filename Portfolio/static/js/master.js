@@ -1,46 +1,47 @@
-//////////////navbar links disappear on a certain path//////////////
-// catching the html objects(acts simular to an array)
-var index_navs = document.querySelectorAll('#IndexNav');
-//  catching the url and spliting it by '/'(returns a list)
-var url = window.location.pathname.split('/');
+// //////////////navbar links disappear on a certain path//////////////
+// // catching the html objects(acts simular to an array)
+// var index_navs = document.querySelectorAll('#IndexNav');
+// //  catching the url and spliting it by '/'(returns a list)
+// var url = window.location.pathname.split('/');
+//
+// //////////////hidding particular navs in case a certain site is visited////////////////////////////////////////////////////
+// // checking the url elements for a match
+// for (var i = 0; i < url.length; i++) {
+//    if (url[i] == 'Projects' ||url[i] == 'signup' ||url[i] == 'login' ||url[i] == 'nfl') {
+//      // hidding the query html elements
+//      for (var k = 0; k < index_navs.length; k++) {
+//        index_navs[k].style.display='none';
+//      }
+//    }
+// }
 
-//////////////hidding particular navs in case a certain site is visited////////////////////////////////////////////////////
-// checking the url elements for a match
-for (var i = 0; i < url.length; i++) {
-   if (url[i] == 'Projects' ||url[i] == 'signup' ||url[i] == 'login' ||url[i] == 'nfl') {
-     // hidding the query html elements
-     for (var k = 0; k < index_navs.length; k++) {
-       index_navs[k].style.display='none';
-     }
-   }
-}
 
-
-////////////changing the background depending on the url (not quite working)////////////////////////////////////////////////////
-var url2 = window.location.pathname.split('/');
-
-setInterval(function(){
-  for (var i = 0; i < url.length; i++) {
-     if (url2.includes('blog')) {
-       $('body').removeClass('base-body')
-       $('body').addClass('blog-body')
-     }else{
-       $('body').removeClass('blog-body')
-       $('body').addClass('base-body')
-    }
-  }
-// check intervall in milliseconds
-}, 100);
+// ////////////changes the background depending on the url////////////////////////////////////////////////////
+//
+//
+// setInterval(function(){
+//   var url = window.location.pathname.split('/');
+//   for (var i = 0; i < url.length; i++) {
+//      if (url.includes('blog')) {
+//        $('body').removeClass('base-body')
+//        $('body').addClass('blog-body')
+//      }else{
+//        $('body').removeClass('blog-body')
+//        $('body').addClass('base-body')
+//     }
+//   }
+// // check intervall in milliseconds
+// }, 100);
 
 //////////////navbar changes background and link color while scrolling past a certain point////////////////////////////////////////////
 // adds classes as soon as the window scroll is below 750 //
 setInterval(function(){
-    if ($(window).scrollTop() >= 900) {
+    if ($(window).scrollTop() >= 20) {
       $('nav').removeClass('scroll-up')
       $('nav').addClass('scroll-down')
       $('.nav-link').addClass('nav-link-black')
 
-    }else if ($(window).scrollTop() <= 900) {
+    }else if ($(window).scrollTop() <= 20) {
       $('nav').removeClass('scroll-down')
       $('nav').addClass('scroll-up')
       $('.nav-link').removeClass('nav-link-black')

@@ -28,16 +28,22 @@
   </head>
 
 
+<!-- different backgrounds are injected by template inheritance -->
+<!-- the attributes for echt background are the same and therefor defined here -->
+  <body class='base-body'
+        background= {%block background%} {%endblock%}
+        style = " background-size: cover;
+                  background-repeat: no-repeat;
+                  background-attachment: fixed;">
 
-  <body>
+
+
     <nav class='navbar sticky-top'>
-      <div class="whole-navbar">
+      <div>
         <ul class='nav'>
 
-          <li class='nav-item'><a id='IndexNav' class='nav-link font-link' href="#aboutme_start">About me</a></li>
-          <li class='nav-item'><a id='IndexNav' class='nav-link font-link' href="#portfolio_start">Portfolio</a></li>
-          <li class='nav-item'><a id='IndexNav' class='nav-link font-link' href="#contact_start">Contact me</a></li>
-
+          {%block navbar%}
+          {%endblock%}
 
 
 
@@ -46,8 +52,8 @@
           <li class='nav-item nav-item-brand'><a class='nav-link nav-item-brand-font' href="{% url 'index' %}">Jan Frings</a></li>
 
 
-
-          <li class='nav-item nav-item-projects'><a id='IndexNav' class='nav-link font-link' href="{% url 'projects'%}">Projects</a></li>
+          <li class='nav-item nav-item-portfolio'><a class='nav-link font-link' href="{% url 'portfolio_index'%}">Portfolio</a></li>
+          <li class='nav-item nav-item-projects'><a class='nav-link font-link' href="{% url 'projects'%}">Projects</a></li>
 
           <li class="nav-item dropdown nav-item-login">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

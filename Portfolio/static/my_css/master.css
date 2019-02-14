@@ -2,33 +2,20 @@
 /* /////////////////////////////////////////////////////////////////////////// */
 /* BASE TEMPLATE */
 
-.base-body{
-  background-image: url('/static/images/ggbridge.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
-.blog-body{
-  background-image: url('/static/images/blog_background.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-}
-
-nav{
-  height: 47px;
-}
-
 .font-link, p, h1, h2, h3, h4, h5, td{
   font-family: 'Rufina', serif;
 }
 
+/* ////////////////////////////////////////////////////////////////////////// */
+/* NAVBAR + FOOTER styling */
+nav{
+  height: 50px;
+}
+
 .nav-link{
   color: white;
-  font-size: 1.1em
 }
+
 .nav-item-brand-font{
   font-family: 'Grand Hotel', cursive;
   font-size: 1.6em;
@@ -41,26 +28,64 @@ nav{
   top: 0px;
 }
 
- .nav-item-projects{
-   position: fixed;
-   left: 1150px;
-   top: 0px;
- }
+.nav-item-portfolio{
+  position: fixed;
+  left: 950px;
+  top: 5px;
+}
+
+.nav-item-projects{
+  position: fixed;
+  left: 1100px;
+  top: 5px;
+}
 
  .nav-item-login{
    position: fixed;
    left: 1250px;
-   top: 0px;
+   top: 5px;
+ }
+/* ////////////////////////////////////////////////// */
+/* navbar portfolio */
+ .nav-item-aboutme{
+   position: fixed;
+   left: 100px;
+   top: 5px;
+ }
+ .nav-item-timeline{
+   position: fixed;
+   left: 250px;
+   top: 5px;
+ }
+ .nav-item-contactme{
+   position: fixed;
+   left: 400px;
+    top: 5px;
+ }
+ /* ////////////////////////////////////////////////// */
+ /* navbar projects */
+
+ .nav-item-website{
+   position: fixed;
+   left: 100px;
+   top: 5px;
+ }
+ .nav-item-blog{
+   position: fixed;
+   left: 250px;
+   top: 5px;
+ }
+ .nav-item-nfl{
+   position: fixed;
+   left: 400px;
+   top: 5px;
  }
 
-.whole-navbar{
-  margin-left: 5em;
-  margin-top: 0.4em;
-}
+ /* ////////////////////////////////////////////////// */
+ /* footer */
 
 footer .container .font-footer{
   position: static;
-  bottom: 0.65em;
   font-family: 'Grand Hotel', cursive;
   font-size: 1.3em;
 
@@ -68,7 +93,6 @@ footer .container .font-footer{
 
 footer .container .font-footer-intro{
   position: static;
-  bottom: 0;
 }
 
 
@@ -92,6 +116,18 @@ footer .container .font-footer-intro{
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px white; */
   text-shadow: white;
 }
+
+/* /////////////////////////////////////////////////////////////////////////// */
+/* Index */
+
+.opener{
+  position: fixed;
+  top: 3.7em;
+  left: 5em;
+  right: 5em;
+
+}
+
 
 /* /////////////////////////////////////////////////////////////////////////// */
 /* ABOUT ME */
@@ -121,7 +157,7 @@ footer .container .font-footer-intro{
 }
 
 /* /////////////////////////////////////////////////////////// */
-/* PORTFOLIO */
+/* TIMELINE */
 
 .resume-table{
   margin: 0 auto;
@@ -165,7 +201,7 @@ footer .container .font-footer-intro{
   color: white;
   padding: 2px;
 }
-/* ////////////hover action/////////////// */
+/* ////////////resume download hover action/////////////// */
 .resume-download:hover{
   opacity: 0.7;
 }
@@ -194,7 +230,7 @@ footer .container .font-footer-intro{
 }
 
 /* /////////////////////////////////////////////////////////////////////////// */
-/* prject section */
+/* PROJECT */
 
 .project_window{
   height: 400px;
@@ -207,7 +243,7 @@ footer .container .font-footer-intro{
 }
 
 /* /////////////////////////////////////////////////////////////////////////// */
-/* blog section */
+/* BLOG */
 
 
 /* //////////////////style post_index.html///////////////// */
@@ -251,6 +287,8 @@ footer .container .font-footer-intro{
   width: 800px;
 
 }
+
+/* //////////////////style mentor icon///////////////// */
 
 /* Style all font awesome icons */
 .blog-post-socialmedia-icons {

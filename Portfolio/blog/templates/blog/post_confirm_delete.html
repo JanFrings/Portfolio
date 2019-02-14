@@ -1,4 +1,10 @@
 {%extends 'base.html'%}
+
+{%load static%}
+{%block background%}
+"/static/images/blog_background.jpg"
+{%endblock%}
+
 {% block content %}
   <form action="" method="post">{% csrf_token %}
     <p>Are you sure you want to delete "{{ object }}"?</p>
