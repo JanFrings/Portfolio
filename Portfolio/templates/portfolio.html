@@ -80,9 +80,6 @@
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
 
-        <a href="{% url 'projects'%}"><h5>Projects</h5></a>
-
-
         <a class="anchor" id="portfolio_start"></a>
 
         <table class='resume-table'>
@@ -190,6 +187,8 @@
 
        <br>
        <br>
+       <br>
+       <br>
 
        <table class='resume-download-table'>
          <tr>
@@ -233,7 +232,7 @@
     <table>
 
         <tr>
-          <td class='contact_icon'><a class='contact_icon' href="#"><i class="fas fa-envelope fa-3x"></i></a></td>
+          <td class='contact_icon'><a class='contact_icon' href="{% url 'emailcontact:email_contact'%}"><i class="fas fa-envelope fa-3x"></i></a></td>
           <td class='contact_table'><a class='black' href="#"><strong>E-mail</strong><br>Jan-Frings@gmx.de </a></td>
 
           <td></td>

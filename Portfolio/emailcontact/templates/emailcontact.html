@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{%load static%}
+{%block background%}
+"/static/images/blog_background.jpg"
+{%endblock%}
+
+{%block content%}
+
+<form class=""  method="POST">
+  {%csrf_token%}
+  {{form.as_p}}
+  <button type="submit"></button>
+</form>
+
+
+{%endblock%}
