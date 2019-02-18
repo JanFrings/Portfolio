@@ -134,4 +134,12 @@ MEDIA_URL = '/media/'
 LOGIN_REDIRECT_URL = 'test'
 LOGOUT_REDIRECT_URL = 'thanks'
 
+# SendGrid
+# Frings94
+# ST...
+# Free Plan
+# Admin API Key:'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'
+# User API Key: 'SG.8FS96JnwSX2pv_6DYFvWMg.yPOOvmwmFWr5QrS1ms67k-jDuLWQnjDr6Dy0G9mL5Sw'(wurde bei der Einrichtung des Services erstellt aber noch nicht mit sendgrid synchronisiert)
+
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

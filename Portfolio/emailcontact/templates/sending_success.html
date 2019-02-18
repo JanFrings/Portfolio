@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+
+{%load static%}
+{%block background%}
+"/static/images/blog_background.jpg"
+{%endblock%}
+
+{%block content%}
+<div class="container">
+  <div class="jumbotron">
+    <h1>Thank you for your message! </h1>
+    <h1>I'll respond as soon as possible.</h1>
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <h3>In the meantime please concider checking out some of the the great human beeings inside the <a href="{% url 'blog:post_index' %}">Blog</a> application</h3>
+    <a class="sending-success-bloglink" href="{% url 'blog:post_index' %}">Blog</a>
+
+  </div>
+</div>
+
+{%endblock%}

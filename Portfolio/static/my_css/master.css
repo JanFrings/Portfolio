@@ -208,6 +208,28 @@ footer .container .font-footer-intro{
 .resume-download-font:hover{
   color: white;
 }
+/* /////////////////////////////////////////////////////////////////////////// */
+/* EmailContact*/
+
+/* ////////////sending-success page blog link/////////////// */
+
+.sending-success-bloglink{
+  border-radius: 50%;
+  background-color: #3c4149;
+  color: white;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 4em;
+  text-align: center;
+  padding: 20px;
+  margin-left: 7em;
+  margin-right: 7em;
+}
+
+.sending-success-bloglink:hover{
+  opacity: 0.7;
+  color: white;
+
+}
 
 /* /////////////////////////////////////////////////////////////////////////// */
 /* CONTACT ME*/
