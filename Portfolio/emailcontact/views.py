@@ -12,11 +12,7 @@ import sendgrid
 import os
 from sendgrid.helpers.mail import *
 
-import (
-    'fmt'
-    'github.com/sendgrid/sendgrid-go'
-    'os'
-)
+#import sendgrid api here
 
 # //////////////////////////////EmailContact////////////////////////////////
 
