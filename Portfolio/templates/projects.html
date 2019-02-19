@@ -18,28 +18,39 @@
   <p>You won´t get any junk and your data is save as well!</p>
 </div>
 
+
+
 <div class="jumbotron">
   <div class="container">
-
-    <table border='5'>
-
-      <tr class='project_row'>
+    <table>
+      <tr>
         <td class='project_window'>Project window <a href="{% url 'blog:post_index' %}">Blog</a> </td>
         <td class='project_info'>Info</td>
       </tr>
+    </table>
+  </div>
+</div>
 
-      <tr class='project_row'>
+<div class="jumbotron">
+  <div class="container">
+    <table>
+      <tr>
         <td class='project_window'>Project window</td>
         <td class='project_info'>Info</td>
       </tr>
+    </table>
+  </div>
+</div>
 
-      <tr class='project_row'>
+<div class="jumbotron">
+  <div class="container">
+    <table>
+      <tr>
         <td class='project_window'> Project window <a href="{% url 'nfl_stats:nfl_index' %}">NFL</a> </td>
         <td class='project_info'>Info</td>
       </tr>
-
     </table>
-
   </div>
 </div>
+
 {%endblock%}
