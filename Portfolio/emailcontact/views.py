@@ -12,6 +12,11 @@ import sendgrid
 import os
 from sendgrid.helpers.mail import *
 
+import (
+    'fmt'
+    'github.com/sendgrid/sendgrid-go'
+    'os'
+)
 
 # //////////////////////////////EmailContact////////////////////////////////
 
@@ -23,7 +28,7 @@ def email_contact(request):
         form = forms.EmailContactForm(request.POST)
         if form.is_valid():
             try:
-                sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('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'))
+                sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
                 #grabing the essential information of the form to wrap it up in the sendgrid syntax
                 #//////////////problem: ends up in junk inbox///////////////////////////////////
                 from_email = Email(form.cleaned_data['from_email'])
