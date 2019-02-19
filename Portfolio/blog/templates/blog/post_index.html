@@ -11,28 +11,45 @@
 
 <div class="jumbotron">
   <div class="container">
-    <h3>Welcome to my Blog</h3>
 
-    <p>what you see is your world </p>
-
-    <p>In this point in time we're getting swamped with information and noone knows what to believe anymore.</p>
-    <p>This blog is helping me keeping track of people who I decided to listen to.</p>
-    <p>Maybe it helps you to find some inspiration and hope in humanity as well!</p>
+    <h3>What you see and what you hear makes your life experience.</h3>
+    <br>
+    <p>This blog is helping me to keep track of people who I decided to listen to.</p>
+    <p>Maybe it can help you to find some inspiration and restore hope in humanity as well!</p>
   </div>
 </div>
 
 <table class='blog-index-table'>
-  <thead>
-    <th>Mind</th>
-    <th>Body</th>
-    <th>Career</th>
-  </thead>
   <tr>
-    <td> <a href="{% url 'blog:shetty' %}"> <img src="{% static 'images/shetty.jpg' %}" alt="Uuups that went wrong."> </a></td>
-    <td> <a href="{% url 'blog:goggins' %}"> <img src="{% static 'images/goggins.jpg'%}" alt="Uuups that went wrong."></a></td>
-    <td> <a href="{% url 'blog:vaynerchuk' %}"> <img src="{% static 'images/vaynerchuk.jpg'%}" alt="Uuups that went wrong."> </a></td>
+    <td>
+      <a href="{% url 'blog:shetty' %}">
+        <!-- used nested divs to create an ancestor relationship for the relativ-absolute position and the overlay effect  -->
+        <div class="image-container">
+          <div class="overlay">
+            <div class="text">Mindful Happiness</div>
+          </div>
+        <img src="{% static 'images/shetty.jpg' %}" alt="Uuups that went wrong."></a>
+      </div>
+    </td>
+    <td>
+      <a href="{% url 'blog:goggins' %}">
+        <div class="image-container">
+          <div class="overlay">
+            <div class="text">Body&Mind Control</div>
+          </div>
+        <img src="{% static 'images/goggins.jpg'%}" alt="Uuups that went wrong."></a>
+      </div>
+    </td>
+    <td>
+      <a href="{% url 'blog:vaynerchuk' %}">
+        <div class="image-container">
+          <div class="overlay">
+            <div class="text">Career&Life adviece</div>
+          </div>
+        <img src="{% static 'images/vaynerchuk.jpg'%}" alt="Uuups that went wrong."></a>
+      </div>
+    </td>
   </tr>
-
 </table>
 
 {%endblock%}

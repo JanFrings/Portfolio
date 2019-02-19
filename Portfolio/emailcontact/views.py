@@ -12,6 +12,7 @@ import sendgrid
 import os
 from sendgrid.helpers.mail import *
 
+
 #import sendgrid api here
 
 # //////////////////////////////EmailContact////////////////////////////////
