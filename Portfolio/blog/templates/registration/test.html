@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-{%extends 'base.html'%}
+{% extends 'base.html' %}
+
+{%load static%}
+{%block background%}
+"/static/images/blog_background.jpg"
+{%endblock%}
 
 {%block content%}
 <div class="jumbotron">
   <div class="container">
 
-    <h1>You are logged in now!</h1>
+    <h1>You are logged in!</h1>
     <h3>Check out the features of my projects now!</h3>
 
     <a href="{% url 'projects' %}"> <p>Projects this way</p> </a>

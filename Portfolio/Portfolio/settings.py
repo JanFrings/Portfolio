@@ -133,7 +133,3 @@ MEDIA_URL = '/media/'
 
 LOGIN_REDIRECT_URL = 'test'
 LOGOUT_REDIRECT_URL = 'thanks'
-
-
-
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

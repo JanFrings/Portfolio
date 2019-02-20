@@ -6,9 +6,9 @@
 {%endblock%}
 
 {%block navbar%}
-<li class='nav-item nav-item-website'><a class='nav-link font-link' href="#aboutme_start">Website</a></li>
-<li class='nav-item nav-item-blog'><a class='nav-link font-link' href="#portfolio_start">Blog</a></li>
-<li class='nav-item nav-item-nfl'><a class='nav-link font-link' href="#contact_start">NFL</a></li>
+<li class='nav-item nav-item-website'><a class='nav-link font-link' href="#aboutme_start"><button class='nav-link-button' type="button" >Blog</button></a></li>
+<li class='nav-item nav-item-blog'><a class='nav-link font-link' href="#portfolio_start"><button class='nav-link-button' type="button" >NFL</button></a></li>
+<li class='nav-item nav-item-nfl'><a class='nav-link font-link' href="#contact_start"><button class='nav-link-button' type="button" >Space Invader</button></a></li>
 {%endblock%}
 
 {%block content%}
@@ -22,7 +22,7 @@
 
 <div class="jumbotron">
   <div class="container">
-    <table>
+    <table border='5'>
       <tr>
         <td class='project_window'>Project window <a href="{% url 'blog:post_index' %}">Blog</a> </td>
         <td class='project_info'>Info</td>

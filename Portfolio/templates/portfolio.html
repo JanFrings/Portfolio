@@ -7,9 +7,9 @@
 {%endblock%}
 
 {%block navbar%}
-<li class='nav-item nav-item-aboutme'><a class='nav-link font-link' href="#aboutme_start">About me</a></li>
-<li class='nav-item nav-item-timeline'><a class='nav-link font-link' href="#portfolio_start">Timeline</a></li>
-<li class='nav-item nav-item-contactme'><a class='nav-link font-link' href="#contact_start">Contact me</a></li>
+<li class='nav-item nav-item-aboutme'><a class='nav-link font-link' href="#aboutme_start"><button class='nav-link-button' type="button" >About me</button></a></li>
+<li class='nav-item nav-item-timeline'><a class='nav-link font-link' href="#portfolio_start"><button class='nav-link-button' type="button" >Timeline</button></a></li>
+<li class='nav-item nav-item-contactme'><a class='nav-link font-link' href="#contact_start"><button class='nav-link-button' type="button" >Contact me</button></a></li>
 {%endblock%}
 
 
@@ -29,7 +29,7 @@
         <tr>
           <td>
             <!-- left content table cell  -->
-            <h1>Hey!</h1>
+            <h3>Hey, I'm Jan Frings.</h3>
             <br>
             <p>Feel free to check out my Portfolio and Projects to get an impression of my past work!</p>
             <br>
@@ -193,21 +193,18 @@
        <table class='resume-download-table'>
          <tr>
            <td>
-             <p><strong>Official curriculum vitae PDF-File right here</strong></p>
+             <h4><strong>Curriculum vitae PDF-File right here</strong></h4>
            </td>
            <tr>
              <td class='resume-download-table'>
                <button class='resume-download' type="button">
-               <a class='resume-download-font' href="{% url 'resume_download'%}"><i class="fas fa-file-download fa-2x"></i></a>
+               <a class='resume-download-font' href="{% url 'resume_download'%}"><i class="fas fa-file-download fa-3x"></i></a>
              </button>
            </td>
            </tr>
 
          </tr>
        </table>
-
-
-
 
      </div>
     </div>

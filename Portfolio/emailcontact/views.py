@@ -12,10 +12,13 @@ import sendgrid
 import os
 from sendgrid.helpers.mail import *
 
-
-#import sendgrid api here
-
 # //////////////////////////////EmailContact////////////////////////////////
+#IF a new sendgrd api key is needed the following terminal commands are needed to set it as environmental variable
+# echo "export SENDGRID_API_KEY='YOUR_actual_API_KEY'" > sendgrid.env
+# echo "sendgrid.env" >> .gitignore
+# source ./sendgrid.env
+
+
 
 def email_contact(request):
     form = forms.EmailContactForm()
