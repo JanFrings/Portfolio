@@ -1,53 +1,105 @@
 <!DOCTYPE html>
 {%extends 'base.html'%}
-
+{%load static%}
 {%block background%}
 "/static/images/blog_background2.jpg"
 {%endblock%}
 
 {%block navbar%}
-<li class='nav-item nav-item-website'><a class='nav-link font-link' href="#aboutme_start"><button class='nav-link-button' type="button" >Blog</button></a></li>
-<li class='nav-item nav-item-blog'><a class='nav-link font-link' href="#portfolio_start"><button class='nav-link-button' type="button" >NFL</button></a></li>
-<li class='nav-item nav-item-nfl'><a class='nav-link font-link' href="#contact_start"><button class='nav-link-button' type="button" >Space Invader</button></a></li>
+<li class='nav-item nav-item-website'><a class='nav-link font-link' href="#blog_start"><button class='nav-link-button' type="button" >Blog</button></a></li>
+<li class='nav-item nav-item-blog'><a class='nav-link font-link' href="#nfl_start"><button class='nav-link-button' type="button" >NFL</button></a></li>
+<li class='nav-item nav-item-nfl'><a class='nav-link font-link' href="#space_start"><button class='nav-link-button' type="button" >Space Invader</button></a></li>
 {%endblock%}
 
 {%block content%}
 <div class="container jumbotron">
-  <h1>Hey check out my projects!</h1>
-  <p>To be able to use the functionality you have to sign up first.</p>
-  <p>You won´t get any junk and your data is save as well!</p>
+  <h1>Hey thank you for checking out my projects!</h1>
 </div>
 
 
-
+<div class='container'>
+  <h1 style='margin-top:3em; margin-bottom:0.5em;'>Blog application</h1>
+</div>
 <div class="jumbotron">
   <div class="container">
-    <table border='5'>
+    <table>
       <tr>
-        <td class='project_window'>Project window <a href="{% url 'blog:post_index' %}">Blog</a> </td>
-        <td class='project_info'>Info</td>
+        <td class='project_window'>
+          <a href="{% url 'blog:post_index' %}">
+            <img width="480" height="270" src="{%static 'images/project_blog.png'%}" alt="Uuups image is missing">
+            <a class="anchor" id="blog_start"></a>
+          </a>
+        </td>
+        <td class='project_info'>
+
+          This is a Blog about people who have the power to inspire and motivate.<br>
+          Check out the Blog and gain some perspective.<br>
+          <br>
+          <br>
+          <br>
+          Or check out some insights on how I build the application.<br>
+          <br>
+          <a class="project-codelink" href="#">Code</a>
+
+        </td>
+      </tr>
+    </table>
+
+  </div>
+</div>
+
+<div class='container'>
+  <h1 style='margin-top:3em; margin-bottom:0.5em;'>NFL application</h1>
+</div>
+<div class="jumbotron">
+  <div class="container">
+    <a class="anchor" id="nfl_start"></a>
+    <table>
+      <tr>
+        <td class='project_window'>
+          <a href="{% url 'nfl:nfl_index' %}">
+            <img width="480" height="270" src="{%static 'images/project_nfl.jpg'%}" alt="Uuups image is missing">
+          </a>
+        </td>
+        <td class='project_info'>
+          This is a Data analysis project combined with a passion of mine the NFL.<br>
+          I've used common analytical concepts to show some insights of various players of my choice <br>
+          Check out some intersting stats visualized in a digestible way.<br>
+          <br>
+          <br>
+          <br>
+          Or check out how I build the application.<br>
+          <br>
+          <a class="project-codelink" href="#">Code</a>
+        </td>
       </tr>
     </table>
   </div>
 </div>
 
-<div class="jumbotron">
-  <div class="container">
-    <table>
-      <tr>
-        <td class='project_window'>changes</td>
-        <td class='project_info'>Info</td>
-      </tr>
-    </table>
-  </div>
+<div class='container'>
+  <h1 style='margin-top:3em; margin-bottom:0.5em;'>Space Invader application</h1>
 </div>
-
 <div class="jumbotron">
   <div class="container">
+    <a class="anchor" id="space_start"></a>
     <table>
       <tr>
-        <td class='project_window'> Project window <a href="{% url 'nfl_stats:nfl_index' %}">NFL</a> </td>
-        <td class='project_info'>Info</td>
+        <td class='project_window'>
+          <a href="#">
+            <img width="480" height="270" src="{%static 'images/project_space.jpeg'%}" alt="Uuups image is missing">
+          </a>
+        </td>
+        <td class='project_info'>
+          This is my interpretation of the famouse game Space Invaders.<br>
+          Get nostalgic.<br>
+          <br>
+          <br>
+          <br>
+          Or check out some insights on how I build the application.<br>
+          <br>
+          <a class="project-codelink" href="#">Code</a>
+        </td>
       </tr>
     </table>
   </div>

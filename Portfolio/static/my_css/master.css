@@ -281,13 +281,31 @@ footer .container .font-footer-intro{
 .project_window{
   height: 400px;
   width: 400px;
+  text-align: center;
 }
 
 .project_info{
   height: 400px;
-  width: 400px;
+  width: 600px;
+  text-align: center;
+  margin: 150px;
+}
+.project-codelink{
+  border-radius: 50%;
+  background-color: #3c4149;
+  color: white;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 4em;
+  text-align: center;
+  position: static;
+  padding: 15px;
 }
 
+.project-codelink:hover{
+  opacity: 0.7;
+  color: white;
+
+}
 /* /////////////////////////////////////////////////////////////////////////// */
 /* BLOG */
 
