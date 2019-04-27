@@ -14,11 +14,18 @@ nav{
 
 .nav-link{
   color: white;
+  font-size: 1.1em;
+}
+
+/* a -> to adress the all the links */
+.nav-item a:hover{
+ color: white;
+ opacity: 0.9;
 }
 
 .nav-item-brand-font{
   font-family: 'Grand Hotel', cursive;
-  font-size: 1.65em;
+  font-size: 1.8em;
 }
 
 .nav-item-brand{
@@ -31,13 +38,13 @@ nav{
 .nav-item-portfolio{
   position: fixed;
   left: 880px;
-  top: 0px;
+  top: 10px;
 }
 
 .nav-item-projects{
   position: fixed;
   left: 1050px;
-  top: 0px;
+  top:10px;
 }
 
  .nav-item-login{
@@ -45,28 +52,12 @@ nav{
    left: 1220px;
    top: 12px;
  }
- .nav-item-login:hover{
+ .nav-item-login a:hover{
    color: white;
    border-radius: 10%;
  }
 
 
- .nav-link-button{
-   color: white;
-   width: 120px;
-   height: 50px;
-   background-color: transparent;
-   border-color: transparent;
-   border-radius: 12%;
- }
- .nav-link-button:hover{
-   border-color: white;
-   opacity: 0.9;
- }
-
- .navbar button:focus{
-   outline-color: white;
- }
 
 
 /* ////////////////////////////////////////////////// */
@@ -74,17 +65,17 @@ nav{
  .nav-item-aboutme{
    position: fixed;
    left: 100px;
-   top: 0px;
+   top: 10px;
  }
  .nav-item-timeline{
    position: fixed;
    left: 250px;
-   top: 0px;
+   top: 10px;
  }
  .nav-item-contactme{
    position: fixed;
    left: 400px;
-    top: 0px;
+    top: 10px;
  }
  /* ////////////////////////////////////////////////// */
  /* navbar projects */
@@ -92,17 +83,17 @@ nav{
  .nav-item-website{
    position: fixed;
    left: 100px;
-   top: 0px;
+   top: 10px;
  }
  .nav-item-blog{
    position: fixed;
    left: 250px;
-   top: 0px;
+   top: 10px;
  }
  .nav-item-nfl{
    position: fixed;
    left: 400px;
-   top: 0px;
+   top: 10px;
  }
 
  /* ////////////////////////////////////////////////// */
@@ -176,12 +167,19 @@ footer .container .font-footer-intro{
 }
 
 .aboutme-image{
-  margin-left: 6em;
+  margin-left: 20em;
   border-radius: 50%;
 }
 
 /* /////////////////////////////////////////////////////////// */
 /* TIMELINE */
+
+.icons-timeline{
+  margin: 0 auto;
+  width: 800px;
+  text-align: center;
+  border-bottom: 2px black solid;
+}
 
 .resume-table{
   margin: 0 auto;
