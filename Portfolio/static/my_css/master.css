@@ -14,7 +14,7 @@ nav{
 
 .nav-link{
   color: white;
-  font-size: 1.1em;
+  font-size: 1.2em;
 }
 
 /* a -> to adress the all the links */
@@ -284,9 +284,9 @@ footer .container .font-footer-intro{
 
 .project_info{
   height: 400px;
-  width: 600px;
-  text-align: center;
-  margin: 150px;
+  width: 800px;
+  text-align: left;
+  padding-left: 100px;
 }
 .project-codelink{
   border-radius: 50%;
