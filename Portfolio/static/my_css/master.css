@@ -438,3 +438,28 @@ footer .container .font-footer-intro{
 .post-url{
   /* padding:20px; */
 }
+
+
+/* /////////////////////////////////////NFL Project/////////////////////////////// */
+.data-container{
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.data-analysis{
+  font-size: 1.2em;
+  text-align: justify;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+  margin-left: 15em;
+  margin-right: 15em;
+}
+
+.freq_table{
+  margin-left: 10em;
+  margin-right: auto;
+  text-align: center;
+}
+
+.data-image{
+  width: 420px;
+}

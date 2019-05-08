@@ -1,10 +1,134 @@
 <!DOCTYPE html>
 {%extends 'base.html'%}
+{%block background%}
+"/static/images/NFL.jpg"
+{%endblock%}
 {%block content%}
-<div class="jumbotron">
-  <h1>NFL</h1>
-  {{tag}}
+
+
+<div class="container" style="margin-top: 6em;">
+  <h1>Draft impact on quarterback careers</h1>
+  <p>The end goal:
+    Evaluation on the importance of the draft round for an NFL Quarterback and if it is an indicater of the players skills.</p>
 </div>
+
+<div class="jumbotron">
+  <div class="data-container ">
+    <h2>Collecting data</h2>
+    <p class='data-analysis'>
+      Data analyses start with a set of data. To work with data of my choice, I used the scraper tool Beautiful Soup and the website www.pro-football-reference.com.
+      To make a choice of which kind of data to collect I looked at various factors:<br>
+      <br>
+      • The period of time to investigate<br>
+      • The kind and the amount of data <br>
+      • Which Quarterbacks to look at and what kind of stats to collect<br>
+      • The question of how to define success as a Quarterback<br>
+      <br>
+      The time period had to represent the near past and present.
+      But also be long enough to cover the process long time professionals are going through in the league.
+      I choose the turn of the millennium as the starting point.
+      To reduce the amount of data I decided to compare successful Quarterbacks with one another, rather than all Players that have been drafted since then.
+      I  came to the conclusion that there was not only one indicator of success but a variety.<br>
+      Divided into two main groups:<br>
+      <br>
+      • Quarterback related stats <br>
+      • Team achievements (Postseasons & Super Bowl attempts).<br>
+      <br>
+      This left me with the conditions to scrape data from draft classes 2000 ongoing, of players that have started one or more postseason games.<br>
+      Regarding the Quarterback stats I mainly looked at the factors used to calculate the NFL passer rating:<br>
+      <br>
+      • Pass attempts <br>
+      • Pass completions <br>
+      • Passing yards <br>
+      • Passing touchdowns <br>
+      • Passing interceptions <br>
+      <br>
+      Additional: <br>
+      <br>
+      • Games attended as starting Quarterback <br>
+      • Draft round <br>
+    </p>
+  </div>
+</div>
+
+<div class="jumbotron">
+  <div class="data-container">
+    <h2>Drawing insights</h2>
+
+    <p class='data-analysis'>
+      The collected and cleaned data had now to be explored.
+      I used various methods to gain insights and search for visible patterns to make generalized predictions beyond the sample set.<br>
+    </p>
+
+    <table>
+      <td class="freq-table"><img class="data-image" src="/static/nfl/freq_dist.png" alt=""></td>
+      <td><img class="data-image" src="/static/nfl/bullet_diag.png" alt=""></td>
+    </table>
+
+    <p class='data-analysis'>
+      <br>
+      This part refers to each players first three years of professional football:<br>
+      <br>
+      This heat map shows the correlation between the Quarterback stats, the correlation coefficient indicates dependencies and is
+      scalable from 1.0(perfect positive correlation) over 0.0(no correlation) to -1.0(perfect negative correlation).
+    </p>
+
+    <table>
+      <td> 1. Year<img class="data-image" src="/static/nfl/corr_1.png" alt=""></td>
+      <td> 2. Year<img class="data-image" src="/static/nfl/corr_2.png" alt=""></td>
+      <td> 3. Year<img class="data-image" src="/static/nfl/corr_3.png" alt=""></td>
+    </table>
+
+    <p class="data-analysis">
+      This allows the assumption that Quarterbacks that make it into the league are going to average a predictable ratio of
+      completions, yards, touchdowns, and even interceptions given a certain amount of attempts.
+      Furthermore, the negative correlation of the draft round to the other stats illustrates that a smaller (earlier) draft round
+      leads to increased Qb related stats.
+    </p>
+    <p class="data-analysis">
+      The insights we gained through the correlation heatmap emphasize that the stats are highly based on the number of attempts
+      and that this deserves differentiation in more detail.
+      Moreover, if the first premise is true that means the negative correlation of the draft round to all the other stats is also based
+      on the attempts or rather on the number of games a quarterback gets to start.
+    </p>
+
+    <table>
+      <td> 1. Year<img class="data-image" src="/static/nfl/cmp:att_1.png" alt=""></td>
+      <td> 2. Year<img class="data-image" src="/static/nfl/cmp:att_2.png" alt=""></td>
+      <td> 3. Year<img class="data-image" src="/static/nfl/cmp:att_3.png" alt=""></td>
+    </table>
+
+    <table>
+      <td> 1. Year<img class="data-image" src="/static/nfl/yds:att_1.png" alt=""></td>
+      <td> 2. Year<img class="data-image" src="/static/nfl/yds:att_2.png" alt=""></td>
+      <td> 3. Year<img class="data-image" src="/static/nfl/yds:att_3.png" alt=""></td>
+    </table>
+
+    <table>
+      <td> 1. Year<img class="data-image" src="/static/nfl/td:att_1.png" alt=""></td>
+      <td> 2. Year<img class="data-image" src="/static/nfl/td:att_2.png" alt=""></td>
+      <td> 3. Year<img class="data-image" src="/static/nfl/td:att_3.png" alt=""></td>
+    </table>
+
+    <table>
+      <td> 1. Year<img class="data-image" src="/static/nfl/int:att_1.png" alt=""></td>
+      <td> 2. Year<img class="data-image" src="/static/nfl/int:att_2.png" alt=""></td>
+      <td> 3. Year<img class="data-image" src="/static/nfl/int:att_3.png" alt=""></td>
+    </table>
+
+    <p class="data-analysis">
+      The conclusion we can draw is that the Quarterbacks drafted early on, not necessarily differ a lot in their
+      ability to produce results. However, the organizations that draft Quarterbacks initially in general expected them
+      to be able to lead an NFL team as soon as possible.
+      This leads through more experience early on in their career which then results in more consistent results.
+      And over time in a more complete player who can also compete in the postseason and onto the super bowl.
+    </p>
+
+  </div>
+
+</div>
+
+
 
 
 {%endblock%}
