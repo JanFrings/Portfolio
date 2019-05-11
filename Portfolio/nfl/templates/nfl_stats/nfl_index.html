@@ -48,6 +48,9 @@
       • Games attended as starting Quarterback <br>
       • Draft round <br>
     </p>
+    <table>
+      <td> <img class="data-horizontal" src="/static/nfl/data_head_1.png" alt=""> </td>
+    </table>
   </div>
 </div>
 
@@ -57,19 +60,40 @@
 
     <p class='data-analysis'>
       The collected and cleaned data had now to be explored.
-      I used various methods to gain insights and search for visible patterns to make generalized predictions beyond the sample set.<br>
+      I used various methods to gain insights and search for visible
+      patterns to make generalized predictions beyond the sample set.<br>
+      <br>
+      Starting off with a statistical overview to get familiar with the data:
+    </p>
+
+
+    <td> <img class="data-horizontal" src="/static/nfl/stat_overview_1.png" alt=""> </td>
+    <p class='data-analysis'>
+      Strikingly the 50% and 75% quantile values stand out. It reveals that the majority of the Quarterbacks
+      which made the criteria are actually first round picks and that only 25% were drafted later than round 4.
     </p>
 
     <table>
-      <td class="freq-table"><img class="data-image" src="/static/nfl/freq_dist.png" alt=""></td>
-      <td><img class="data-image" src="/static/nfl/bullet_diag.png" alt=""></td>
+      <td>
+        <p class='data-analysis-table'>
+          Looking at the distribution we see how the first round picks outweigh the list of postseason attendant
+          Quarterbacks and surprisingly the draft rounds 2 - 8(UDFA) don't show a decreasing frequency as may be expected.
+          In fact, the draft rounds 2, 6 and undrafted Quarterbacks make up the same amount and the rest is close behind.
+        </p>
+      </td>
+      <td> <img class="data-vertical-table" src="/static/nfl/draft_skewness_1.png" alt=""> </td>
+    </table>
+
+    <table class="freq-table">
+      <td><img class="data-image-m" src="/static/nfl/freq_dist.png" alt=""></td>
+      <td><img class="data-image-m" src="/static/nfl/bullet_diag.png" alt=""></td>
     </table>
 
     <p class='data-analysis'>
+      At this point, the question occurs how the players drafted in the first round differ from later picks.
+      Therefore we take a closer look at the stats each player achieved within the first 3 years after the draft.<br>
       <br>
-      This part refers to each players first three years of professional football:<br>
-      <br>
-      This heat map shows the correlation between the Quarterback stats, the correlation coefficient indicates dependencies and is
+      These heat maps show the correlation between the Quarterback stats, the correlation coefficient indicates dependencies and is
       scalable from 1.0(perfect positive correlation) over 0.0(no correlation) to -1.0(perfect negative correlation).
     </p>
 
@@ -80,50 +104,129 @@
     </table>
 
     <p class="data-analysis">
-      This allows the assumption that Quarterbacks that make it into the league are going to average a predictable ratio of
-      completions, yards, touchdowns, and even interceptions given a certain amount of attempts.
-      Furthermore, the negative correlation of the draft round to the other stats illustrates that a smaller (earlier) draft round
-      leads to increased Qb related stats.
+      We can see an outstanding positive correlation in between the stats which allows the assumption
+      that Quarterbacks that make it into the league are going to average a predictable ratio of completions,
+      yards, touchdowns, and even interceptions given the proportionate amount of attempts.<br>
+      Furthermore, the negative correlation of the draft round to the other stats illustrates that a smaller (earlier)
+      draft round goes along with increased Qb related stats.<br>
+      <br>
+      The insights we gained through the correlation heat maps emphasize that the stats are highly based on the number
+      of attempts and that this deserves differentiation in more detail.<br>
+      <br>
+      <br>
+      The following statistical overview shows the ratio of completions, yards, touchdowns, and interceptions in relation
+      to the number of attempts:
     </p>
-    <p class="data-analysis">
-      The insights we gained through the correlation heatmap emphasize that the stats are highly based on the number of attempts
-      and that this deserves differentiation in more detail.
-      Moreover, if the first premise is true that means the negative correlation of the draft round to all the other stats is also based
-      on the attempts or rather on the number of games a quarterback gets to start.
-    </p>
 
     <table>
-      <td> 1. Year<img class="data-image" src="/static/nfl/cmp:att_1.png" alt=""></td>
-      <td> 2. Year<img class="data-image" src="/static/nfl/cmp:att_2.png" alt=""></td>
-      <td> 3. Year<img class="data-image" src="/static/nfl/cmp:att_3.png" alt=""></td>
-    </table>
-
-    <table>
-      <td> 1. Year<img class="data-image" src="/static/nfl/yds:att_1.png" alt=""></td>
-      <td> 2. Year<img class="data-image" src="/static/nfl/yds:att_2.png" alt=""></td>
-      <td> 3. Year<img class="data-image" src="/static/nfl/yds:att_3.png" alt=""></td>
-    </table>
-
-    <table>
-      <td> 1. Year<img class="data-image" src="/static/nfl/td:att_1.png" alt=""></td>
-      <td> 2. Year<img class="data-image" src="/static/nfl/td:att_2.png" alt=""></td>
-      <td> 3. Year<img class="data-image" src="/static/nfl/td:att_3.png" alt=""></td>
-    </table>
-
-    <table>
-      <td> 1. Year<img class="data-image" src="/static/nfl/int:att_1.png" alt=""></td>
-      <td> 2. Year<img class="data-image" src="/static/nfl/int:att_2.png" alt=""></td>
-      <td> 3. Year<img class="data-image" src="/static/nfl/int:att_3.png" alt=""></td>
+      <td> <img class="data-horizontal" src="/static/nfl/stat_per_att_overview_1.png" alt=""> </td>
     </table>
 
     <p class="data-analysis">
-      The conclusion we can draw is that the Quarterbacks drafted early on, not necessarily differ a lot in their
-      ability to produce results. However, the organizations that draft Quarterbacks initially in general expected them
-      to be able to lead an NFL team as soon as possible.
-      This leads through more experience early on in their career which then results in more consistent results.
-      And over time in a more complete player who can also compete in the postseason and onto the super bowl.
+      Examining the chart, especially the extreme values catch the eye.
+      Values like these are notably unrealistic and to get a better understanding of how these values fit into the bigger
+      picture a boxplot comes in handy.
     </p>
 
+    <table>
+      <td> <img class="data-horizontal" src="/static/nfl/outliers_1.png" alt=""> </td>
+    </table>
+
+    <p class="data-analysis">
+      The extrema we observed prior are now visible as outliers.<br>
+      Exceptional values like these are the result of a very small number of attempts which either went better than average or
+      below average but have no statistical usability.<br>
+      Further investigations are made without the outlying values that were based on an unrepresentative number of attempts.
+      This ensures more accurate predictions.<br>
+      <br>
+      <br>
+      The following collection of scatter plots displays the completion-, yard-, touchdown- and interception-ratio within a three
+      year time period with a black line indicating the mean value.
+    </p>
+
+    <table class="table-s">
+      <td><img class="data-image-s" src="/static/nfl/cmp_1.png" alt=""></td>
+      <td><img class="data-image-s" src="/static/nfl/cmp_2.png" alt=""></td>
+      <td><img class="data-image-s" src="/static/nfl/cmp_3.png" alt=""></td>
+    </table>
+
+    <table class="table-s">
+      <td><img class="data-image-s" src="/static/nfl/yds_1.png" alt=""></td>
+      <td><img class="data-image-s" src="/static/nfl/yds_2.png" alt=""></td>
+      <td><img class="data-image-s" src="/static/nfl/yds_3.png" alt=""></td>
+    </table>
+
+    <table class="table-s">
+      <td><img class="data-image-s" src="/static/nfl/td_1.png" alt=""></td>
+      <td><img class="data-image-s" src="/static/nfl/td_2.png" alt=""></td>
+      <td><img class="data-image-s" src="/static/nfl/td_3.png" alt=""></td>
+    </table>
+
+    <table class="table-s">
+      <td><img class="data-image-s" src="/static/nfl/int_1.png" alt=""></td>
+      <td><img class="data-image-s" src="/static/nfl/int_2.png" alt=""></td>
+      <td><img class="data-image-s" src="/static/nfl/int_3.png" alt=""></td>
+    </table>
+
+    <p class="data-analysis">
+      The primal observation at this point is that the Quarterbacks drafted early on,
+      not necessarily differ a lot in their yields. In fact, there is no conclusive evidence
+      that first round Quarterbacks clearly stand out from others.<br>
+      However, the sheer number of first rounders is strikingly visible again.<br>
+      <br>
+      Concluding there is another factor for a Franchise to draft Quarterbacks early rather than significant
+      performance differences.
+      When considering to draft a Quarterback initially in the draft, this goes along with the
+      potential upside an outstanding new leader could have on the team.
+      Moreover, first round picks, in general, are expected to be able to make a difference right
+      away which then leads to more experience early on in their career.
+      Over time the consequence of this process is that the more experienced players can produce constant
+      results and are able to compete on bigger stages like the postseason or the super bowl.<br>
+      <br>
+      <br>
+      Looking at the number of games the Quarterbacks get to start, shows a clear differential favoring
+      the players being drafted early.
+    </p>
+
+    <table>
+      <td> 1. Year<img class="data-image" src="/static/nfl/gs_1.png" alt=""></td>
+      <td> 2. Year<img class="data-image" src="/static/nfl/gs_2.png" alt=""></td>
+      <td> 3. Year<img class="data-image" src="/static/nfl/gs_3.png" alt=""></td>
+    </table>
+
+    <p class="data-analysis">
+      Concluding can be said that Quarterbacks need to have a brought skillset to be successful on a professional level.<br>
+      <br>
+      Firstly, the ability to produce consistent results is crucial to enter the league and is even more important once drafted,
+      to be considered as a starting player.
+      To put some numbers on, these are the ratios the Quarterbacks who attendant a postseason averaged in their first three years:<br>
+    </p>
+      <table class="freq-table">
+        <tr>
+          <td class="stat-table">• Completion %</td>
+          <td class="stat-table">: >=  59.5</td>
+        </tr>
+        <tr>
+          <td class="stat-table">• Yards per attempt</td>
+          <td class="stat-table">: >=  6.95</td>
+        </tr>
+        <tr>
+          <td class="stat-table">• Touchdown %</td>
+          <td class="stat-table">: >=  3.84</td>
+        </tr>
+        <tr>
+          <td class="stat-table">• Interception %</td>
+          <td class="stat-table">: <=  3.0</td>
+        </tr>
+      </table>
+
+    <p class="data-analysis">
+      However, to be able to gain enough experience to execute well under pressure on a big stage,
+      the draft round plays a major role.<br>
+      The earlier the draft round the better the chances are to get to work right away. The later the draft
+      round the more important it is to deliver whenever the opportunity occures.<br>
+      Just like 6 round pick and 6-time super bowl winning Quarterback Mr. Tom Brady said:
+    </p>
   </div>
 
 </div>

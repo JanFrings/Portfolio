@@ -454,12 +454,51 @@ footer .container .font-footer-intro{
   margin-right: 15em;
 }
 
-.freq_table{
-  margin-left: 10em;
-  margin-right: auto;
-  text-align: center;
+.data-analysis-table{
+  font-size: 1.2em;
+  text-align: justify;
+  margin-left: 15em;
+}
+
+.data-horizontal{
+  width: 740px;
+  margin-left: 18em;
+  margin-right: 18em;
+}
+
+.data-vertical{
+  height: 400px;
+  margin-left: 16.5em;
+  margin-right: 16.5em;
+}
+
+.data-vertical-table{
+  height: 400px;
+  margin-right: 17.5em;
+  margin-left: 2em;
+}
+
+.freq-table{
+  margin-left: 18em;
 }
 
 .data-image{
   width: 420px;
+}
+
+.data-image-m{
+  width: 375px;
+}
+
+.data-image-s{
+  width: 248px;
+}
+
+.table-s{
+  margin-left: 18em;
+}
+
+.stat-table{
+  font-size: 1.15em;
+
 }
