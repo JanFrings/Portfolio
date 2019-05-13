@@ -448,7 +448,7 @@ footer .container .font-footer-intro{
 .data-analysis{
   font-size: 1.2em;
   text-align: justify;
-  margin-top: 2.5em;
+  margin-top: 2em;
   margin-bottom: 2.5em;
   margin-left: 15em;
   margin-right: 15em;
@@ -500,5 +500,7 @@ footer .container .font-footer-intro{
 
 .stat-table{
   font-size: 1.15em;
+  padding-right: 1.5em;
+  padding-top: 1.3em;
 
 }

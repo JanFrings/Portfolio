@@ -17,23 +17,22 @@
   <div class="container">
     <h1>Thank you for visiting!</h1>
     <p>Feel free to check out my projects. <br>
-      Each one had the purpose to push my skills to the edge of what I was able to do at that point. <br>
       You'll find a short description of each project along with the technical knowledge I had to acquire.</p>
   </div>
 </div>
 
 <!-- //////////////////Website Project//////////////// -->
+<a class="anchor" id="website_start"></a>
 <div class='container'>
-  <h1 style='margin-top:3em; margin-bottom:0.5em;'>Website Project</h1>
+  <h1 style='margin-top:3em; margin-bottom:0.5em;'>Website project</h1>
 </div>
 <div class="jumbotron">
   <div class="container">
-    <a class="anchor" id="website_start"></a>
     <table>
       <tr>
         <td class='project_window'>
-          <a href="#">
-            <img width="480" height="270" src="{%static 'images/project_website.png'%}" alt="Uuups image is missing">
+          <a href="{%url 'index'%}">
+            <img width="480" height="270" src="{%static 'images/project_website.png'%}" alt="Uuups image is missing"><br>
           </a>
         </td>
         <td class='project_info'>
@@ -57,14 +56,19 @@
           <a class="project-codelink" href="#">Code</a> -->
         </td>
       </tr>
+      <tr>
+        <td> </td>
+        <a> </a>
+      </tr>
     </table>
   </div>
 </div>
 
 
 <!-- //////////////////Blog Project//////////////// -->
+<a class="anchor" id="blog_start"></a>
 <div class='container'>
-  <h1 style='margin-top:3em; margin-bottom:0.5em;'>Blog Application</h1>
+  <h1 style='margin-top:3em; margin-bottom:0.5em;'>Blog application</h1>
 </div>
 <div class="jumbotron">
   <div class="container">
@@ -73,16 +77,18 @@
         <td class='project_window'>
           <a href="{% url 'blog:post_index' %}">
             <img width="480" height="270" src="{%static 'images/project_blog.png'%}" alt="Uuups image is missing">
-            <a class="anchor" id="blog_start"></a>
           </a>
+          <br>
+          <br>
+          <p><strong>Take a look </strong><i class="fas fa-hand-point-up fa-2x"></i> </p>
         </td>
         <td class='project_info'>
 
           <p><strong>#Add functionality</strong></p>
           <br>
           <p>
-            The step from a static website, that only displays information, to a dynamic platform that allows interaction had to be made.<br>
-            This requires a back-end understanding of how to save data to a database and query it when needed.<br>
+            The next step was to add functionality that allows interaction.<br>
+            This required a back-end understanding of how to save data to a database and query it when needed.<br>
             <strong>• Python</strong>
             <br><br>
           </p>
@@ -96,33 +102,37 @@
 
 
 <!-- //////////////////NFL Project//////////////// -->
+<a class="anchor" id="nfl_start"></a>
 <div class='container'>
-  <h1 style='margin-top:3em; margin-bottom:0.5em;'>NFL Project</h1>
+  <h1 style='margin-top:3em; margin-bottom:0.5em;'>Data analysis</h1>
 </div>
 <div class="jumbotron">
   <div class="container">
-    <a class="anchor" id="nfl_start"></a>
+
     <table>
       <tr>
         <td class='project_window'>
           <a href="{% url 'nfl:nfl_index' %}">
             <img width="480" height="270" src="{%static 'images/project_nfl.jpg'%}" alt="Uuups image is missing">
           </a>
+          <br>
+          <br>
+          <p><strong>Take a look </strong><i class="fas fa-hand-point-up fa-2x"></i> </p>
         </td>
         <td class='project_info'>
           <p><strong>#Collect, filter, manipulate data</strong></p>
           <br>
           <p>
-            Processing data is one of the most important skills a software engineer has to have.<br>
+            This project uses a data science approach in order for me to practice the process of drawing insights from a data set.<br>
             <br>
             First I needed to collect meaningful data which I did with the help of a scraper tool.<br>
-            <strong>• Beautiful Soup</strong>
+            <strong>• Beautiful Soup, Python</strong>
             <br><br>
             The raw scraped data had to be filtered. I used software that supports interactive data science and scientific computing.<br>
-            <strong>• Jupyter Notebook</strong>
+            <strong>• Jupyter Notebook, Python</strong>
             <br>
             <br>
-            The concluding step was to manipulate the filtered data in such a way that insights are easily displayed and understood. I used open source data science packages for that purpose.<br>
+            The concluding step was to manipulate the filtered data in such a way that insights were easily displayed. I used open source data science packages for that purpose.<br>
             <strong>• NumPy, Pandas, Matplotlib, Seaborn, Stats Models, Scikit learn</strong>
           </p>
         </td>

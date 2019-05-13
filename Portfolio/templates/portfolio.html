@@ -8,7 +8,7 @@
 
 {%block navbar%}
 <li class='nav-item nav-item-aboutme'><a class='nav-link font-link' href="#aboutme_start">About me</a></li>
-<li class='nav-item nav-item-timeline'><a class='nav-link font-link' href="#portfolio_start">Timeline</a></li>
+<li class='nav-item nav-item-timeline'><a class='nav-link font-link' href="#timeline_start">Timeline</a></li>
 <li class='nav-item nav-item-contactme'><a class='nav-link font-link' href="#contact_start">Contact me</a></li>
 {%endblock%}
 
@@ -17,7 +17,7 @@
 {%block content%}
 
 <!-- main aboutme table -->
-
+<a class="anchor" name="aboutme_start" id="aboutme_start"></a>
 <div class='container'>
   <h1 style='margin-top:2em; margin-bottom:1em;'>About me</h1>
 </div>
@@ -32,7 +32,7 @@
             <h5>Hi, I'm Jan.</h5>
             <br>
             <br>
-            <a class="anchor" id="aboutme_start"></a>
+
 
             <table>
               <tr>
@@ -43,7 +43,7 @@
               <tr>
                 <td class='aboutme_details aboutme_row'><strong>Age</strong> </td>
                 <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-                <td class='aboutme_row'>24 Years</td>
+                <td class='aboutme_row'>25 Years</td>
               </tr>
               <tr>
                 <td class='aboutme_details aboutme_row'><strong>Nationality</strong> </td>
@@ -72,13 +72,14 @@
       </div>
     </div>
 
+    <a class="anchor" name = "timeline_start" id="timeline_start"></a>
     <div class='container'>
       <h1 style='margin-top:2em;  margin-bottom:1em;'>Timeline</h1>
     </div>
 
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <a class="anchor" id="portfolio_start"></a>
+
 
         <h4 style=' text-align: center;
                     margin-top:1em;'>
@@ -153,7 +154,8 @@
             <strong>Work & Travel</strong> <br>
             <strong>Australia</strong> <br>
             <br>
-            Traveling a foreign country on my own was much needed to lift my English skills to the next level and to reflect on what is important to me and set future goals accordingly.
+            Traveling a foreign country on my own was much needed to improve my English skills and to reflect
+            on what is important to me and set future goals accordingly.
           </td>
 
         </tr>
@@ -173,8 +175,7 @@
             <strong>Atom Resources, Australia</strong><br>
             <br>
             <br>
-            To make a living in Australia it was crucial to adapt to the environment and the people.
-            Exploring unknown fields of profession was a necessary adventure alongside. <br>
+            Exploring unknown fields of profession was a necessary adventure alongside the travels. <br>
           </td>
         </tr>
 
@@ -236,12 +237,12 @@
 
 
 
-
+    <a class="anchor" name= "contact_start" id="contact_start"></a>
     <div class='container'>
       <h1 style='margin-top:2em;  margin-bottom:1em;'>Contact me</h1>
     </div>
 
-    <a class="anchor" id="contact_start"></a>
+
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
 
@@ -252,22 +253,22 @@
 
         <tr>
           <td class='contact_icon'><a class='contact_icon' href="{% url 'emailcontact:email_contact'%}"><i class="fas fa-envelope fa-3x"></i></a></td>
-          <td class='contact_table'><a class='black' href="#"><strong>E-mail</strong><br>Jan-Frings@gmx.de </a></td>
+          <td class='contact_table'><a class='black' href="{% url 'emailcontact:email_contact'%}"><strong>E-mail</strong><br>Jan-Frings@gmx.de </a></td>
 
           <td></td>
 
-          <td class='contact_icon'><a class='contact_icon' href="#"><i class="fas fa-info fa-3x"></i></a></td>
-          <td class='contact_table'><a class='black' href="#"><strong>Indeed</strong></a></td>
+          <!-- <td class='contact_icon'><a class='contact_icon' href="#"><i class="fas fa-info fa-3x"></i></a></td>
+          <td class='contact_table'><a class='black' href="#"><strong>Indeed</strong></a></td> -->
         </tr>
 
         <tr>
           <td class='contact_icon'><a class='contact_icon' href="https://github.com/JanFrings"><i class="fab fa-github-square fa-3x"></a></i></td>
-          <td class='contact_table'><a class='black' href="#"><strong>GitHub</strong><br>JanFrings</a></td>
+          <td class='contact_table'><a class='black' href="https://github.com/JanFrings"><strong>GitHub</strong><br>JanFrings</a></td>
 
           <td></td>
 
-          <td class='contact_icon'><a class='contact_icon' href="#"><i class="fab fa-linkedin fa-3x"></i></a></td>
-          <td class='contact_table'><a class='black' href="#"><strong>LinkedIn</strong></a></td>
+          <td class='contact_icon'><a class='contact_icon' href="https://www.linkedin.com/in/jan-frings-32997a185/"><i class="fab fa-linkedin fa-3x"></i></a></td>
+          <td class='contact_table'><a class='black' href="https://www.linkedin.com/in/jan-frings-32997a185/"><strong>LinkedIn</strong></a></td>
         </tr>
 
     </table>

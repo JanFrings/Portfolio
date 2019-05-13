@@ -5,32 +5,55 @@
 {%endblock%}
 {%block content%}
 
-
-<div class="container" style="margin-top: 6em;">
-  <h1>Draft impact on quarterback careers</h1>
-  <p>The end goal:
-    Evaluation on the importance of the draft round for an NFL Quarterback and if it is an indicater of the players skills.</p>
+<div class="container" style="margin-top: 6em;
+                              margin-bottom: 6em;
+                              color: white;">
+  <h1>Draft impact on Quarterback careers</h1>
 </div>
 
 <div class="jumbotron">
+<div class="data-container">
+  <p>
+    <div class="container">
+    <h3>In case you're interested in the code, feel free to take a look: </h3>
+    </div>
+    <br>
+    <a class='data-analysis' style="color:black;" target="_blank"  href="https://nbviewer.jupyter.org/github/JanFrings/NFL_data_project/blob/master/NFL_Stats_Scraper_Season_1.ipynb"><i class="fas fa-hand-point-right"></i> Scraping Data</a> <br>
+    <br>
+    <a class='data-analysis' style="color:black;" target="_blank" href="https://nbviewer.jupyter.org/github/JanFrings/NFL_data_project/blob/master/Exploratory_Stats_Season_1.ipynb"><i class="fas fa-hand-point-right"></i> Exploratory Analysis</a>
+
+  </p>
+</div>
+</div>
+
+
+
+<div class="jumbotron">
   <div class="data-container ">
-    <h2>Collecting data</h2>
+
+    <div class="container">
+    <h3>The following article is a data scientific approach to evaluate the importance of the NFL draft for quarterbacks entering the league</h3>
+    <br>
+    <br>
+    <h3>Collecting data:</h3>
+    </div>
+
     <p class='data-analysis'>
-      Data analyses start with a set of data. To work with data of my choice, I used the scraper tool Beautiful Soup and the website www.pro-football-reference.com.
+      Data analyses start with a set of data.<br>
       To make a choice of which kind of data to collect I looked at various factors:<br>
       <br>
       • The period of time to investigate<br>
       • The kind and the amount of data <br>
       • Which Quarterbacks to look at and what kind of stats to collect<br>
-      • The question of how to define success as a Quarterback<br>
+      • How to define a successful Quarterback<br>
       <br>
       The time period had to represent the near past and present.
       But also be long enough to cover the process long time professionals are going through in the league.
-      I choose the turn of the millennium as the starting point.
-      To reduce the amount of data I decided to compare successful Quarterbacks with one another, rather than all Players that have been drafted since then.
+      I chose the turn of the millennium as the starting point.
+      To reduce the amount of data I decided to compare successful Quarterbacks with one another, rather than all players that have been drafted since then.
       I  came to the conclusion that there was not only one indicator of success but a variety.<br>
-      Divided into two main groups:<br>
       <br>
+      Divided into two main groups:<br>
       • Quarterback related stats <br>
       • Team achievements (Postseasons & Super Bowl attempts).<br>
       <br>
@@ -47,19 +70,26 @@
       <br>
       • Games attended as starting Quarterback <br>
       • Draft round <br>
+
     </p>
     <table>
-      <td> <img class="data-horizontal" src="/static/nfl/data_head_1.png" alt=""> </td>
+      <tr>
+        <td> <img class="data-horizontal" src="/static/nfl/data_head_1.png" alt=""> </td>
+      </tr>
+      <tr>
+        <td><p class="data-horizontal">(Source: www.pro-football-reference.com)</p></td>
+      </tr>
     </table>
+
   </div>
 </div>
 
 <div class="jumbotron">
   <div class="data-container">
-    <h2>Drawing insights</h2>
+    <h2 class="container">Drawing insights:</h2>
 
     <p class='data-analysis'>
-      The collected and cleaned data had now to be explored.
+      The collected data had now to be explored.<br>
       I used various methods to gain insights and search for visible
       patterns to make generalized predictions beyond the sample set.<br>
       <br>
@@ -90,7 +120,7 @@
     </table>
 
     <p class='data-analysis'>
-      At this point, the question occurs how the players drafted in the first round differ from later picks.
+      At this point, the question occurs if the players drafted in the first round differ from later picks.
       Therefore we take a closer look at the stats each player achieved within the first 3 years after the draft.<br>
       <br>
       These heat maps show the correlation between the Quarterback stats, the correlation coefficient indicates dependencies and is
@@ -104,12 +134,11 @@
     </table>
 
     <p class="data-analysis">
-      We can see an outstanding positive correlation in between the stats which allows the assumption
-      that Quarterbacks that make it into the league are going to average a predictable ratio of completions,
+      We can see an outstanding positive correlation in between almost all stats. This allows the assumption
+      that Quarterbacks, that make it into the league are going to average a predictable ratio of completions,
       yards, touchdowns, and even interceptions given the proportionate amount of attempts.<br>
       Furthermore, the negative correlation of the draft round to the other stats illustrates that a smaller (earlier)
       draft round goes along with increased Qb related stats.<br>
-      <br>
       The insights we gained through the correlation heat maps emphasize that the stats are highly based on the number
       of attempts and that this deserves differentiation in more detail.<br>
       <br>
@@ -168,12 +197,36 @@
       <td><img class="data-image-s" src="/static/nfl/int_3.png" alt=""></td>
     </table>
 
+
     <p class="data-analysis">
       The primal observation at this point is that the Quarterbacks drafted early on,
       not necessarily differ a lot in their yields. In fact, there is no conclusive evidence
-      that first round Quarterbacks clearly stand out from others.<br>
+      that the first round Quarterbacks clearly stand out from others.<br>
       However, the sheer number of first rounders is strikingly visible again.<br>
-      <br>
+      The ability to produce consistent results is crucial to enter the league and is even more important once drafted,
+      to be considered as a starting player.
+      To put some numbers on, these are the ratios the Quarterbacks who attendant a postseason averaged in their first three years:
+    </p>
+        <table class="freq-table">
+          <tr>
+            <td class="stat-table">• Completions</td>
+            <td class="stat-table">  ≈   60 %</td>
+          </tr>
+          <tr>
+            <td class="stat-table">• Yards</td>
+            <td class="stat-table">  ≈  7.0 / Attempt</td>
+          </tr>
+          <tr>
+            <td class="stat-table">• Touchdowns</td>
+            <td class="stat-table">  ≈   3.85%</td>
+          </tr>
+          <tr>
+            <td class="stat-table">• Interceptions</td>
+            <td class="stat-table">  ≈   3.0%</td>
+          </tr>
+        </table>
+    <p class="data-analysis">
+
       Concluding there is another factor for a Franchise to draft Quarterbacks early rather than significant
       performance differences.
       When considering to draft a Quarterback initially in the draft, this goes along with the
@@ -194,38 +247,15 @@
       <td> 3. Year<img class="data-image" src="/static/nfl/gs_3.png" alt=""></td>
     </table>
 
-    <p class="data-analysis">
-      Concluding can be said that Quarterbacks need to have a brought skillset to be successful on a professional level.<br>
-      <br>
-      Firstly, the ability to produce consistent results is crucial to enter the league and is even more important once drafted,
-      to be considered as a starting player.
-      To put some numbers on, these are the ratios the Quarterbacks who attendant a postseason averaged in their first three years:<br>
-    </p>
-      <table class="freq-table">
-        <tr>
-          <td class="stat-table">• Completion %</td>
-          <td class="stat-table">: >=  59.5</td>
-        </tr>
-        <tr>
-          <td class="stat-table">• Yards per attempt</td>
-          <td class="stat-table">: >=  6.95</td>
-        </tr>
-        <tr>
-          <td class="stat-table">• Touchdown %</td>
-          <td class="stat-table">: >=  3.84</td>
-        </tr>
-        <tr>
-          <td class="stat-table">• Interception %</td>
-          <td class="stat-table">: <=  3.0</td>
-        </tr>
-      </table>
+
 
     <p class="data-analysis">
-      However, to be able to gain enough experience to execute well under pressure on a big stage,
-      the draft round plays a major role.<br>
-      The earlier the draft round the better the chances are to get to work right away. The later the draft
-      round the more important it is to deliver whenever the opportunity occures.<br>
-      Just like 6 round pick and 6-time super bowl winning Quarterback Mr. Tom Brady said:
+      Draft rounds play a major role when it comes to gaining enough experience as a starter and ultimatly to execute well under pressure on a big stage.
+      This doen't make it easier for first round picks to compete in the NFL but it's more likely that they'll be able to shows
+      and grow there skills.<br>
+      Conclusion:<br>
+      The earlier the draft round the better the chances are to get to work right away. <br>
+      The later the draft round the more important it is to deliver whenever the opportunity occures.<br>
     </p>
   </div>
 
