@@ -26,7 +26,7 @@ SECRET_KEY = '8cowyy8^vdtzr4i-(e$y4aqy9guq=66efh%lx58rs(3#q2a=9a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['JanFrings.de']
 
 
 # Application definition
