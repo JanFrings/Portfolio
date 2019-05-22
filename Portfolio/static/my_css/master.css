@@ -117,13 +117,14 @@ footer .container .font-footer-intro{
 
 /* ###### navbar attributes that change while scrolling #######  */
 .scroll-down{
-  transition: background-color 1.5s ease;
-  background-color: #3c4149;
-  opacity: 0.95;
+  transition: background-color 5s ease;
+  /* background-color: #3c4149; */
+  background-color: black;
+  opacity: 0.85;
 }
 
 .scroll-up{
-  transition: background-color 0.7s ease;
+  transition: background-color 0.5s ease;
   background-color: transparent;
 }
 
@@ -216,7 +217,7 @@ footer .container .font-footer-intro{
 
 .resume-download{
   text-align: center;
-  background-color: #3c4149;
+  background-color: black;
   border-radius: 10px;
 }
 .resume-download-font{
