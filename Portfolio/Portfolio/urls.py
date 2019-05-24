@@ -33,7 +33,8 @@ urlpatterns = [
     path('blog/register/', include('django.contrib.auth.urls')),
     path('test/', views.TestView.as_view(), name='test'),
     path('thanks/', views.ThanksView.as_view(), name='thanks'),
-    path('resume/download', views.resume_download, name='resume_download'),
+    path('resume/download/eng', views.resume_download_english, name='resume_download_eng'),
+    path('resume/download/ger', views.resume_download_german, name='resume_download_ger'),
 ]
 
 if settings.DEBUG:

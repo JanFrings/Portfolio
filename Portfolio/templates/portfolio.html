@@ -7,9 +7,13 @@
 {%endblock%}
 
 {%block navbar%}
-<li class='nav-item nav-item-aboutme'><a class='nav-link font-link' href="#aboutme_start">About me</a></li>
-<li class='nav-item nav-item-timeline'><a class='nav-link font-link' href="#timeline_start">Timeline</a></li>
-<li class='nav-item nav-item-contactme'><a class='nav-link font-link' href="#contact_start">Contact me</a></li>
+
+
+
+<li class='nav-item active'><a class='nav-link font-link' href="#aboutme_start">About me<span class="sr-only">(current)</span></a></li>
+<li class='nav-item active'><a class='nav-link font-link' href="#timeline_start">Timeline<span class="sr-only">(current)</span></a></li>
+<li class='nav-item active'><a class='nav-link font-link' href="#contact_start">Contact me<span class="sr-only">(current)</span></a></li>
+
 {%endblock%}
 
 
@@ -24,51 +28,51 @@
 
 <div class="jumbotron jumbotron-fluid">
   <div class="container">
-      <table>
-
-        <tr>
-          <td>
-            <!-- left content table cell  -->
-            <h5>Hi, I'm Jan.</h5>
-            <br>
-            <br>
 
 
-            <table>
-              <tr>
-                <td class='aboutme_details aboutme_row'><strong>Name</strong> </td>
-                <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-                <td class='aboutme_row'>Jan Theodor Frings</td>
-              </tr>
-              <tr>
-                <td class='aboutme_details aboutme_row'><strong>Age</strong> </td>
-                <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-                <td class='aboutme_row'>25 Years</td>
-              </tr>
-              <tr>
-                <td class='aboutme_details aboutme_row'><strong>Nationality</strong> </td>
-                <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-                <td class='aboutme_row'>Germany</td>
-              </tr>
-              <tr>
-                <td class='aboutme_details aboutme_row'><strong>Location</strong> </td>
-                <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-                <td class='aboutme_row'>Aachen, NRW</td>
-              </tr>
-              <tr>
-                <td class='aboutme_details aboutme_row'><strong>Degree</strong> </td>
-                <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
-                <td class='aboutme_row'>Bachelor of Civil Engineering</td>
-              </tr>
-            </table>
-          </td>
 
-          <td>
-            <!-- right image table cell -->
-            <img class='aboutme-image' src="{% static 'images/icon.jpg'%}" alt="" width="350" height="350">
-          </td>
-        </tr>
-      </table>
+
+        <table class="aboutme-table">
+          <tr>
+
+            <td class="aboutme-image-cell">
+              <img class='aboutme-image' src="{% static 'images/about_me.jpg'%}" alt="">
+            </td>
+
+            <td>
+              <table>
+                <tr>
+                  <td class='aboutme_details aboutme_row'><strong>Name</strong> </td>
+                  <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+                  <td class='aboutme_row'>Jan Theodor Frings</td>
+                </tr>
+                <tr>
+                  <td class='aboutme_details aboutme_row'><strong>Age</strong> </td>
+                  <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+                  <td class='aboutme_row'>25 Years</td>
+                </tr>
+                <tr>
+                  <td class='aboutme_details aboutme_row'><strong>Nationality</strong> </td>
+                  <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+                  <td class='aboutme_row'>Germany</td>
+                </tr>
+                <tr>
+                  <td class='aboutme_details aboutme_row'><strong>Location</strong> </td>
+                  <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+                  <td class='aboutme_row'>Aachen, NRW</td>
+                </tr>
+                <tr>
+                  <td class='aboutme_details aboutme_row'><strong>Degree</strong> </td>
+                  <td class='aboutme_devider aboutme_row'><strong>:</strong> </td>
+                  <td class='aboutme_row'>Bachelor of Civil Engineering</td>
+                </tr>
+              </table>
+
+
+          </tr>
+        </table>
+
+
       </div>
     </div>
 
@@ -216,15 +220,26 @@
        <table class='resume-download-table'>
          <tr>
            <td>
-             <h5><strong>*Curriculum vitae PDF-File right here</strong></h5>
+             <h5><strong>*Curriculum vitae PDF-file right here</strong></h5>
            </td>
-           <tr>
+         </tr>
+         <tr>
+           <table class='resume-download-table'>
+             <tr>
+               <td class='resume-download-table'>
+                 <button class='resume-download' type="button">
+                 <a class='resume-download-font' href="{% url 'resume_download_eng'%}"><i class="fas fa-file-download fa-3x"></i>English</a>
+               </button>
+             </td>
              <td class='resume-download-table'>
                <button class='resume-download' type="button">
-               <a class='resume-download-font' href="{% url 'resume_download'%}"><i class="fas fa-file-download fa-3x"></i></a>
+               <a class='resume-download-font' href="{% url 'resume_download_ger'%}"><i class="fas fa-file-download fa-3x"></i>German</a>
              </button>
            </td>
-           </tr>
+           </table>
+         </tr>
+
+
 
          </tr>
        </table>
@@ -259,16 +274,16 @@
 
           <!-- <td class='contact_icon'><a class='contact_icon' href="#"><i class="fas fa-info fa-3x"></i></a></td>
           <td class='contact_table'><a class='black' href="#"><strong>Indeed</strong></a></td> -->
-        </tr>
 
-        <tr>
+          <td class='contact_icon'><a class='contact_icon' href="https://www.linkedin.com/in/jan-frings-32997a185/"><i class="fab fa-linkedin fa-3x"></i></a></td>
+          <td class='contact_table'><a class='black' href="https://www.linkedin.com/in/jan-frings-32997a185/"><strong>LinkedIn</strong><br>Jan Frings</a></td>
+
           <td class='contact_icon'><a class='contact_icon' href="https://github.com/JanFrings"><i class="fab fa-github-square fa-3x"></a></i></td>
           <td class='contact_table'><a class='black' href="https://github.com/JanFrings"><strong>GitHub</strong><br>JanFrings</a></td>
 
           <td></td>
 
-          <td class='contact_icon'><a class='contact_icon' href="https://www.linkedin.com/in/jan-frings-32997a185/"><i class="fab fa-linkedin fa-3x"></i></a></td>
-          <td class='contact_table'><a class='black' href="https://www.linkedin.com/in/jan-frings-32997a185/"><strong>LinkedIn</strong></a></td>
+
         </tr>
 
     </table>

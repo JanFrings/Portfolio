@@ -21,6 +21,10 @@ class TestView(TemplateView):
 class ThanksView(TemplateView):
     template_name = 'registration/thanks.html'
 
-def resume_download(request):
-    response = FileResponse(open('static/documents/Frings_Resume.pdf', 'rb'), as_attachment=True)
+def resume_download_english(request):
+    response = FileResponse(open('static/documents/Frings_Resume_eng.pdf', 'rb'), as_attachment=True)
+    return response
+
+def resume_download_german(request):
+    response = FileResponse(open('static/documents/Frings_Resume_ger.pdf', 'rb'), as_attachment=True)
     return response

@@ -14,7 +14,7 @@ nav{
 
 .nav-link{
   color: white;
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 /* a -> to adress the all the links */
@@ -23,78 +23,26 @@ nav{
  opacity: 0.9;
 }
 
+.nav-link{
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+}
+
 .nav-item-brand-font{
   font-family: 'Grand Hotel', cursive;
-  font-size: 1.8em;
+  font-size: 2em;
+  color: white;
 }
 
-.nav-item-brand{
-  position: fixed;
-  right:650px;
-  left: 650px;
-  top: 4px;
-}
 
-.nav-item-portfolio{
-  position: fixed;
-  left: 880px;
-  top: 10px;
-}
-
-.nav-item-projects{
-  position: fixed;
-  left: 1050px;
-  top:10px;
-}
-
- .nav-item-login{
-   position: fixed;
-   left: 1220px;
-   top: 12px;
- }
- .nav-item-login a:hover{
+.nav-item-login a:hover{
    color: white;
    border-radius: 10%;
  }
 
 
-
-
-/* ////////////////////////////////////////////////// */
-/* navbar portfolio */
- .nav-item-aboutme{
-   position: fixed;
-   left: 100px;
-   top: 10px;
- }
- .nav-item-timeline{
-   position: fixed;
-   left: 250px;
-   top: 10px;
- }
- .nav-item-contactme{
-   position: fixed;
-   left: 400px;
-    top: 10px;
- }
- /* ////////////////////////////////////////////////// */
- /* navbar projects */
-
- .nav-item-website{
-   position: fixed;
-   left: 100px;
-   top: 10px;
- }
- .nav-item-blog{
-   position: fixed;
-   left: 250px;
-   top: 10px;
- }
- .nav-item-nfl{
-   position: fixed;
-   left: 400px;
-   top: 10px;
- }
+.toggle-button{
+  background-color: white;
+}
 
  /* ////////////////////////////////////////////////// */
  /* footer */
@@ -117,7 +65,7 @@ footer .container .font-footer-intro{
 
 /* ###### navbar attributes that change while scrolling #######  */
 .scroll-down{
-  transition: background-color 5s ease;
+  transition: background-color 4s ease;
   /* background-color: #3c4149; */
   background-color: black;
   opacity: 0.85;
@@ -137,25 +85,28 @@ footer .container .font-footer-intro{
 /* Index */
 
 .opener{
-  position: fixed;
-  top: 3.7em;
-  left: 5em;
-  right: 5em;
-
+  position: static;
+  left:35%;
+  right 65%;
+  padding-top: 3em;
+  color: white;
+  font-family: 'Grand Hotel', cursive;
+  font-size: 4em;
+  /* text-align: center; */
 }
 
 
 /* /////////////////////////////////////////////////////////////////////////// */
 /* ABOUT ME */
 
-.opener{
-  color: white;
-  font-family: 'Grand Hotel', cursive;
-  font-size: 4em;
-  text-align: center;
+.aboutme-table{
+  width:100%;
+  margin: 0 auto;
 }
 
+
 .aboutme_row{
+  padding-left: 2.5em;
   padding-bottom: 0.7em;
 }
 
@@ -167,17 +118,25 @@ footer .container .font-footer-intro{
   padding-right: 3em;
 }
 
-.aboutme-image{
-  margin-left: 20em;
-  border-radius: 50%;
+
+.aboutme-image-cell{
+  width: 35%;
 }
+.aboutme-image{
+  width:100%;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+
+
 
 /* /////////////////////////////////////////////////////////// */
 /* TIMELINE */
 
 .icons-timeline{
   margin: 0 auto;
-  width: 800px;
+  width: 50%;
   text-align: center;
   border-bottom: 2px black solid;
 }
@@ -188,9 +147,8 @@ footer .container .font-footer-intro{
 
 
 .content-left{
-  width: 400px;
+  width: 40%;
   height: 100px;
-  padding-right: 1em;
   padding-top: 6em;
   padding-bottom: 2em;
   border-right: 2px black solid;
@@ -199,7 +157,7 @@ footer .container .font-footer-intro{
 }
 
 .content-right{
-  width: 400px;
+  width: 40%;
   height: 100px;
   padding-left: 1em;
   padding-top: 6em;
@@ -277,34 +235,25 @@ footer .container .font-footer-intro{
 /* /////////////////////////////////////////////////////////////////////////// */
 /* PROJECT */
 
-.project_window{
-  height: 400px;
-  width: 400px;
+.project-window{
+
+  width: 50%;
   text-align: center;
 }
 
-.project_info{
-  height: 400px;
-  width: 800px;
+.project-info{
+
+  width: 50%;
+  padding-left: 1em;
   text-align: left;
-  padding-left: 100px;
-}
-.project-codelink{
-  border-radius: 50%;
-  background-color: #3c4149;
-  color: white;
-  font-family: 'Grand Hotel', cursive;
-  font-size: 4em;
-  text-align: center;
-  position: static;
-  padding: 15px;
 }
 
-.project-codelink:hover{
-  opacity: 0.7;
-  color: white;
+.project-image{
 
+  max-width: 100%;
+  max-height: 100%;
 }
+
 /* /////////////////////////////////////////////////////////////////////////// */
 /* BLOG */
 
@@ -314,23 +263,18 @@ footer .container .font-footer-intro{
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+  width: 100%
 }
 
-.blog-index-table th{
-  color: white;
-  font-family: 'Grand Hotel', cursive;
-  font-size: 4em;
-  text-align: center;
+.blog-cell{
+  width: 30%;
+  height:30%;
 }
 
-.blog-index-table td{
-  width: 430px;
-  height: 430px;
-}
+.blog-image{
 
-.blog-index-table td img{
-  width: 300px;
-  height: 300px;
+  width: 85%;
+  height: 85%;
   border-radius: 50%;
 }
 
@@ -345,8 +289,8 @@ footer .container .font-footer-intro{
   left: 0;
   right: 0;
   margin: auto;
-  height: 300px;
-  width: 300px;
+  width:  85%;
+  height: 100%;
   border-radius: 50%;
   opacity: 0;
   transition: .5s ease;
@@ -357,10 +301,10 @@ footer .container .font-footer-intro{
   opacity: 0.9;
 }
 
-.text {
+.image-text {
   color: white;
   font-family: 'Grand Hotel', cursive;
-  font-size: 25px;
+  font-size: 150%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -442,66 +386,56 @@ footer .container .font-footer-intro{
 
 
 /* /////////////////////////////////////NFL Project/////////////////////////////// */
-.data-container{
-  margin-left: 2em;
-  margin-right: 2em;
+
+.nfl-header-white{
+  color: white;
+}
+
+.nfl-table{
+  width: 100%;
+}
+
+.nfl-content{
+  width:65%;
+  background-color: white;
+}
+
+.nfl-content-border{
+  width:12.5%;
+  background-color: white;
+}
+
+.nfl-header{
+  text-align: center;
+  padding-top:3em;
 }
 .data-analysis{
   font-size: 1.2em;
   text-align: justify;
-  margin-top: 2em;
-  margin-bottom: 2.5em;
-  margin-left: 15em;
-  margin-right: 15em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+
 }
 
-.data-analysis-table{
-  font-size: 1.2em;
-  text-align: justify;
-  margin-left: 15em;
-}
 
 .data-horizontal{
-  width: 740px;
-  margin-left: 18em;
-  margin-right: 18em;
+  width: 100%;
 }
 
 .data-vertical{
-  height: 400px;
-  margin-left: 16.5em;
-  margin-right: 16.5em;
-}
+  height: 32.5%;
 
-.data-vertical-table{
-  height: 400px;
-  margin-right: 17.5em;
-  margin-left: 2em;
-}
-
-.freq-table{
-  margin-left: 18em;
 }
 
 .data-image{
-  width: 420px;
+  width: 100%;
 }
 
-.data-image-m{
-  width: 375px;
-}
-
-.data-image-s{
-  width: 248px;
-}
-
-.table-s{
-  margin-left: 18em;
+.table-half{
+  width: 50%;
+  padding-right: 1em;
 }
 
 .stat-table{
-  font-size: 1.15em;
-  padding-right: 1.5em;
-  padding-top: 1.3em;
-
+  padding-right: 2.5em;
 }

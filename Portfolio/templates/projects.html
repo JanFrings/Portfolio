@@ -6,16 +6,16 @@
 {%endblock%}
 
 {%block navbar%}
-<li class='nav-item nav-item-website'><a class='nav-link font-link' href="#website_start">Website</a></li>
-<li class='nav-item nav-item-blog'><a class='nav-link font-link' href="#blog_start">Blog</a></li>
-<li class='nav-item nav-item-nfl'><a class='nav-link font-link' href="#nfl_start">NFL</a></li>
+<li class='nav-item active'><a class='nav-link font-link' href="#website_start">Website<span class="sr-only">(current)</span></a></li>
+<li class='nav-item active'><a class='nav-link font-link' href="#blog_start">Blog<span class="sr-only">(current)</span></a></li>
+<li class='nav-item active'><a class='nav-link font-link' href="#nfl_start">Data Analysis<span class="sr-only">(current)</span></a></li>
 {%endblock%}
 
 {%block content%}
 <div  class="jumbotron"
       style="margin-top :6em;">
   <div class="container">
-    <h1>Thank you for visiting!</h1>
+    <h1>Feel free to take a look.</h1>
     <p>You'll find a short description of each project along with the technical knowledge I had to acquire.</p>
   </div>
 </div>
@@ -29,12 +29,12 @@
   <div class="container">
     <table>
       <tr>
-        <td class='project_window'>
+        <td class='project-window'>
           <a href="{%url 'index'%}">
-            <img width="480" height="270" src="{%static 'images/project_website.png'%}" alt="Uuups image is missing"><br>
+            <img class="project-image" src="{%static 'images/project_website.png'%}" alt="Uuups image is missing"><br>
           </a>
         </td>
-        <td class='project_info'>
+        <td class='project-info'>
           <p><strong>#Build a static website</strong></p>
           <br>
           <p>
@@ -50,9 +50,6 @@
             Finally, a deployment service was necessary to make the website accessible worldwide.<br>
             <strong>• Pythonanywhere</strong>
           </p>
-          <!-- Or check out some insights on how I build the application.<br>
-          <br>
-          <a class="project-codelink" href="#">Code</a> -->
         </td>
       </tr>
       <tr>
@@ -73,15 +70,15 @@
   <div class="container">
     <table>
       <tr>
-        <td class='project_window'>
+        <td class='project-window'>
           <a href="{% url 'blog:post_index' %}">
-            <img width="480" height="270" src="{%static 'images/project_blog.png'%}" alt="Uuups image is missing">
+            <img class="project-image" src="{%static 'images/project_blog.png'%}" alt="Uuups image is missing">
           </a>
           <br>
           <br>
           <p><strong>Take a look </strong><i class="fas fa-hand-point-up fa-2x"></i> </p>
         </td>
-        <td class='project_info'>
+        <td class='project-info'>
 
           <p><strong>#Add functionality</strong></p>
           <br>
@@ -110,15 +107,15 @@
 
     <table>
       <tr>
-        <td class='project_window'>
+        <td class='project-window'>
           <a href="{% url 'nfl:nfl_index' %}">
-            <img width="480" height="270" src="{%static 'images/project_nfl.jpg'%}" alt="Uuups image is missing">
+            <img class="project-image" src="{%static 'images/project_nfl.jpg'%}" alt="Uuups image is missing">
           </a>
           <br>
           <br>
           <p><strong>Take a look </strong><i class="fas fa-hand-point-up fa-2x"></i> </p>
         </td>
-        <td class='project_info'>
+        <td class='project-info'>
           <p><strong>#Collect, filter, manipulate data</strong></p>
           <br>
           <p>
