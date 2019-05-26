@@ -7,8 +7,10 @@
 {%endblock%}
 
 {% block content %}
-
-
+<div class="container">
+  <br>
+  <br>
+  <br>
         <h1 class='posttitle loader'>{{ post.title }}</h1>
 
         {% if post.published_date %}
@@ -21,7 +23,7 @@
         {% endif %}
 
       <p class='postcontent' >{{ post.text|safe|linebreaksbr }}</p>
-      <p class='postcontent' >{{ post.mentor|safe|linebreaksbr }}</p>
+      <!-- <p class='postcontent' >{{ post.mentor|safe|linebreaksbr }}</p> -->
 
       <hr>
         <a class="btn btn-primary btn-comment" href="{% url 'blog:post_comment' pk=post.pk %}">Add comment</a>
@@ -29,12 +31,13 @@
       {% for comment in post.comments.all %}
 
       <p> {{comment.text}} </p>
-      <p> {{comment.author}}</p>
-      <p> {{comment.created_date}} </p>
+      <p> {{comment.author}} {{comment.created_date}} </p>
 
 
       {%endfor%}
 
+      <a class="btn btn-primary btn-comment" href="{% url 'blog:post_index' %}">Blog<i class="fas fa-undo"></i></a>
 
 
+</div>
 {% endblock %}

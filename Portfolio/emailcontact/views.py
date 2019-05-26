@@ -34,7 +34,7 @@ def email_contact(request):
                 from_email = Email(form.cleaned_data['from_email'])
                 to_email = Email("Jan-frings@gmx.de")
                 # to_email = User.objects.filter(is_active=True).values_list('email', flat=True)
-                # this query gets necessary as soon as I'm activly putting out content for my users
+                # this query gets necessary as soon as I'm activly putting out content for users
                 subject = form.cleaned_data['subject']
                 content = Content("text/plain", form.cleaned_data['content'])
                 #actual mail command through the sendgrid functionality

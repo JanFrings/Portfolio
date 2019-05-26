@@ -8,11 +8,19 @@
 
 {% block content %}
 
+<div class="container">
+    <br>
+    <br>
+    <br>
     <h1>New comment</h1>
     <form method="POST" class="post-form">
     {% csrf_token %}
     {{form.as_p}}
+    {% if user.is_authenticated %}
     <button type="submit" class="save btn btn-default">Post Comment</button>
+    {%else%}
+    <h2 style='text-decoration: underline;'' >Please login to leave a comment</h2>
+    {%endif%}
     </form>
-
+</div>
 {% endblock %}

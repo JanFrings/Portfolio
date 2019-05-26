@@ -21,6 +21,7 @@
             </div>
             <a href="{% url 'blog:post_detail' pk=post.pk %}">Comments: {{ post.comments.all.count }}</a>
         </div>
+        
     {% endfor %}
 
 </div>

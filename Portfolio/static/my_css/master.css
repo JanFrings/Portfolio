@@ -88,7 +88,6 @@ footer .container .font-footer-intro{
   position: static;
   left:35%;
   right 65%;
-  padding-top: 3em;
   color: white;
   font-family: 'Grand Hotel', cursive;
   font-size: 4em;
@@ -110,17 +109,15 @@ footer .container .font-footer-intro{
   padding-bottom: 0.7em;
 }
 
-.aboutme_details{
-  padding-right: 2em;
-}
+
 
 .aboutme_devider{
-  padding-right: 3em;
+  padding-right: 1.5em;
 }
 
 
 .aboutme-image-cell{
-  width: 35%;
+  width: 30%;
 }
 .aboutme-image{
   width:100%;
@@ -219,18 +216,29 @@ footer .container .font-footer-intro{
 .black{
   color: black;
 }
-
-.contact_table{
-  color: black;
-  padding-left: 1em;
-  padding-right: 8em;
-  padding-bottom: 20px;
+.black:hover{
+  color:black;
 }
 
-.contact_icon{
+
+.contact-icon{
+  color: black;
+  width: 6%;
   padding-bottom: 1.1em;
+}
+.contact-icon:hover{
   color: black;
 }
+
+
+.contact-table{
+  color: black;
+  width: 26%;
+  padding-bottom: 1.1em;
+}
+
+
+
 
 /* /////////////////////////////////////////////////////////////////////////// */
 /* PROJECT */
@@ -315,17 +323,23 @@ footer .container .font-footer-intro{
 /* //////////////////////////////////style mentor-htmls////////////////////////////// */
 
 /* //////////////////style mentor-htmls head///////////////// */
+.blog-post-table{
+  width: 100%;
+}
+
 .blog-post-image{
-  margin-left: 0;
-  width: 300px;
-  height: 300px;
+  width:100%;
   border-radius: 50%;
 }
 
-/* position intro text */
+.blog-post-image-cell{
+  width: 30%;
+}
+
+
 .blog-post-intro{
-  padding-left: 35px;
-  width: 800px;
+  padding-left: 2em;
+  width: 60%;
 
 }
 
@@ -333,16 +347,14 @@ footer .container .font-footer-intro{
 
 /* Style all font awesome icons */
 .blog-post-socialmedia-icons {
-  margin: 5px;
-  padding: 20px;
-  width: 70px;
-  height: 70px;
+  margin:10%;
+  padding: 10px;
   text-align: center;
   text-decoration: none;
   border-radius: 50%;
 }
 
-/* Add a hover effect if you want */
+
 .fa:hover {
   opacity: 0.7;
 }
@@ -371,17 +383,16 @@ footer .container .font-footer-intro{
 
 .post-text{
   font-size: 1em;
-  width: 800px;
+  width: 75%;
 }
 
 .post-image{
-  /* padding : 20px; */
-  width: 300px;
-  border-radius: 50%;
+  width: 100%;
 }
 
 .post-url{
-  /* padding:20px; */
+
+
 }
 
 

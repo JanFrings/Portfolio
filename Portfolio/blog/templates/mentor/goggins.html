@@ -12,15 +12,15 @@
   <div class="container">
     <table class='blog-post-table'>
       <tr>
-        <td>
+        <td class='blog-post-image-cell'>
           <img class='blog-post-image' src="{% static 'images/goggins.jpg'%}" alt="">
         </td>
         <td class='blog-post-intro'>
           <h1>David Goggins</h1>
           <p>blabla</p>
         </td>
-        <td>
 
+        <td>
           <table>
             <tr>
               <td> <a class="blog-post-socialmedia-icons fa fa-youtube fa-2x" href="https://www.youtube.com/watch?v=oIrT1eHs1b0"></a> </td>
@@ -32,11 +32,10 @@
             </tr>
             <tr>
               <td><a class="blog-post-socialmedia-icons fa fa-twitter fa-2x" href="https://twitter.com/davidgoggins?lang=de"></a></td>
-
             </tr>
           </table>
-
         </td>
+
       </tr>
     </table>
 
@@ -63,8 +62,14 @@
       </tr>
       <tr>
         <td class='post-text'>{{post.text}}</td>
-        <td class='post-image'><img class='post-image' src="{{post.image.url}}" alt="not showing" height="300" width="300"></td>
+
+        {% if post.image %}
+        <td class='post-image'><img class='post-image' src="{{post.image.url}}" alt="not showing"></td>
+        {%endif%}
+
+        {% if post.url %}
         <td class='post-url'><p><a class='blog-post-socialmedia-icons fa fa-youtube fa-2x' href="{{post.url}}"></a></p></td>
+        {%endif%}
       </tr>
     </table>
   </div>

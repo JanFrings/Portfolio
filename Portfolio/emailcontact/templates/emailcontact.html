@@ -2,17 +2,29 @@
 {% extends 'base.html' %}
 
 {%load static%}
+{% load crispy_forms_tags %}
+
+
 {%block background%}
-"/static/images/blog_background.jpg"
+"/static/images/blog_background2.jpg"
 {%endblock%}
 
 {%block content%}
+<div class="container">
 
-<form class=""  method="POST">
+
+<br>
+<br>
+<br>
+<form  method="POST" novalidate>
+
+
+
   {%csrf_token%}
-  {{form.as_p}}
-  <button type="submit"></button>
-</form>
+  {{form|crispy}}
+  <button type="submit">Send</button>
 
+</form>
+</div>
 
 {%endblock%}

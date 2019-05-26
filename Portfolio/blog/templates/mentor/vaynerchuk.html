@@ -12,7 +12,7 @@
   <div class="container">
     <table class='blog-post-table'>
       <tr>
-        <td>
+        <td class='blog-post-image-cell'>
           <img class='blog-post-image' src="{% static 'images/vaynerchuk.jpg'%}" alt="">
         </td>
         <td class='blog-post-intro'>
@@ -63,8 +63,14 @@
       </tr>
       <tr>
         <td class='post-text'>{{post.text}}</td>
-        <td class='post-image'><img class='post-image' src="{{post.image.url}}" alt="not showing" height="300" width="300"></td>
+
+        {% if post.image %}
+        <td class='post-image'><img class='post-image' src="{{post.image.url}}" alt="not showing"></td>
+        {%endif%}
+
+        {% if post.url %}
         <td class='post-url'><p><a class='blog-post-socialmedia-icons fa fa-youtube fa-2x' href="{{post.url}}"></a></p></td>
+        {%endif%}
       </tr>
     </table>
   </div>
